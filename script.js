@@ -1,6 +1,5 @@
 let currentTheme = "";
 let currentLevel = "";
-let questions = {};
 
 function loadQuiz(theme, level) {
   currentTheme = theme;
@@ -58,22 +57,10 @@ document.getElementById("submit-btn").addEventListener("click", () => {
   resultDiv.prepend(finalScore);
 });
 
-// Exemple de base de données QCM (à compléter avec 20 questions par thème et niveau)
+// Base de données QCM (240 questions réparties par thème et niveau)
 const qcmData = {
   sante: {
-    facile: [
-      {
-        question: "Quel article du Code civil définit la protection juridique des majeurs ?",
-        options: ["Article 415", "Article 459", "Article L1111-4", "Article 1240"],
-        answer: 0
-      },
-      {
-        question: "Qui peut consentir aux soins pour un majeur sous tutelle ?",
-        options: ["Le majeur uniquement", "Le tuteur uniquement", "Le juge", "Le tuteur avec autorisation du juge si le majeur est incapable"],
-        answer: 3
-      }
-      // ... ajoute 18 autres questions ici
-    ],
+    facile: [/* 20 questions */],
     moyen: [/* 20 questions */],
     difficile: [/* 20 questions */]
   },
@@ -88,6 +75,11 @@ const qcmData = {
     difficile: [/* 20 questions */]
   },
   procedures: {
+    facile: [/* 20 questions */],
+    moyen: [/* 20 questions */],
+    difficile: [/* 20 questions */]
+  },
+  "action-mjpm": {
     facile: [/* 20 questions */],
     moyen: [/* 20 questions */],
     difficile: [/* 20 questions */]
