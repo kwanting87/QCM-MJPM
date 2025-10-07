@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>QCM MJPM – Accueil</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QCM MJPM</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>QCM MJPM – Révisions CNC</h1>
-    <p>Choisissez un thème pour commencer</p>
-  </header>
-  <main>
-    <div class="menu">
-      <a href="themes/sante.html">🩺 Santé</a>
-      <a href="themes/patrimoine.html">💼 Patrimoine</a>
-      <a href="themes/famille.html">👨‍👩‍👧‍👦 Famille</a>
-      <a href="themes/procedures.html">⚖️ Procédures</a>
-      <a href="themes/action-mjpm.html">🧭 Action du MJPM</a>
+  <div class="container">
+    <h1>QCM MJPM</h1>
+
+    <div class="selectors">
+      <label for="theme">Thème :</label>
+      <select id="theme">
+        <option value="santé">Santé</option>
+        <option value="patrimoine">Patrimoine</option>
+        <option value="famille">Famille</option>
+        <option value="procédures">Procédures</option>
+        <option value="action">Action du MJPM</option>
+      </select>
+
+      <label for="niveau">Niveau :</label>
+      <select id="niveau">
+        <option value="débutant">Débutant</option>
+        <option value="intermédiaire">Intermédiaire</option>
+        <option value="expérimenté">Expérimenté</option>
+      </select>
+
+      <button onclick="loadQuestion()">Charger une question</button>
     </div>
-  </main>
-  <footer>
-    <p>Site créé par Quentin – CNC MJPM 2025</p>
-  </footer>
+
+    <div id="qcm" class="qcm-box"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
