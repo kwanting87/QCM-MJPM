@@ -26,19 +26,39 @@ const qcmData = {
   }
 };
 
+// Stockage des questions déjà posées
+const questionsDéjàPosées = {};
+
 function loadQuestion() {
   const theme = document.getElementById("theme").value;
   const niveau = document.getElementById("niveau").value;
   const qcmBox = document.getElementById("qcm");
   qcmBox.innerHTML = "";
 
-  const questions = qcmData[theme][niveau];
-  if (!questions || questions.length === 0) {
-    qcmBox.innerHTML = "<p>Aucune question disponible pour ce thème et ce niveau.</p>";
+  // Initialiser le suivi si nécessaire
+  if (!questionsDéjàPosées[theme]) {
+    questionsDéjàPosées[theme] = {};
+  }
+  if (!questionsDéjàPosées[theme][niveau]) {
+    questionsDéjàPosées[theme][niveau] = [];
+  }
+
+  // Filtrer les questions non encore posées
+  const toutesLesQuestions = qcmData[theme][niveau];
+  const restantes = toutesLesQuestions.filter((q, i) => !questionsDéjàPosées[theme][niveau].includes(i));
+
+  if (restantes.length === 0) {
+    qcmBox.innerHTML = "<p>✅ Toutes les questions ont été posées pour ce thème et ce niveau.</p>";
     return;
   }
 
-  const q = questions[Math.floor(Math.random() * questions.length)];
+  // Sélection aléatoire parmi les restantes
+  const indexDansRestantes = Math.floor(Math.random() * restantes.length);
+  const questionIndex = toutesLesQuestions.indexOf(restantes[indexDansRestantes]);
+  const q = toutesLesQuestions[questionIndex];
+
+  // Marquer comme posée
+  questionsDéjàPosées[theme][niveau].push(questionIndex);
 
   const questionEl = document.createElement("h3");
   questionEl.textContent = q.question;
@@ -64,6 +84,7 @@ function loadQuestion() {
     qcmBox.appendChild(btn);
   });
 }
+
 
 qcmData.santé.débutant = [
   {
@@ -406,6 +427,7 @@ qcmData.santé.expérimenté = [
     answer: 0
   }
 ];
+
 
 
 
