@@ -1,53 +1,51 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
   margin: 0;
   padding: 20px;
 }
 
-header, footer {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h1 {
-  color: #2c3e50;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.menu a, .menu button {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.menu button:hover, .menu a:hover {
-  background-color: #2980b9;
-}
-
-main {
-  max-width: 700px;
+.container {
+  max-width: 600px;
   margin: auto;
   background: white;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.question {
-  margin-bottom: 15px;
+h1 {
+  text-align: center;
+  color: #333;
 }
 
-#result p {
-  margin: 5px 0;
+.selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.qcm-box {
+  margin-top: 20px;
+}
+
+.option {
+  margin: 8px 0;
+  padding: 10px;
+  background: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #ddd;
+}
+
+.correct {
+  background-color: #c8f7c5;
+}
+
+.incorrect {
+  background-color: #f7c5c5;
 }
