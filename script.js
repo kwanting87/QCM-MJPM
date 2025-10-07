@@ -49,14 +49,17 @@ function loadQuestion() {
     btn.className = "option";
     btn.textContent = opt;
     btn.onclick = () => {
-      if (i === q.answer) {
-        btn.classList.add("correct");
-        btn.textContent += " ✅";
-      } else {
-        btn.classList.add("incorrect");
-        btn.textContent += " ❌";
-      }
-      document.querySelectorAll(".option").forEach(o => o.onclick = null);
+      const allOptions = document.querySelectorAll(".option");
+      allOptions.forEach((o, index) => {
+        o.onclick = null;
+        if (index === q.answer) {
+          o.classList.add("correct");
+          o.textContent += " ✅";
+        } else if (index === i) {
+          o.classList.add("incorrect");
+          o.textContent += " ❌";
+        }
+      });
     };
     qcmBox.appendChild(btn);
   });
@@ -402,4 +405,5 @@ qcmData.santé.expérimenté = [
     answer: 0
   }
 ];
+
 
