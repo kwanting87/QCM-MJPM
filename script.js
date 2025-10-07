@@ -25,7 +25,6 @@ const qcmData = {
     expérimenté: [/* 20 questions */]
   }
 };
-
 function loadQuestion() {
   const theme = document.getElementById("theme").value;
   const niveau = document.getElementById("niveau").value;
@@ -405,5 +404,6 @@ qcmData.santé.expérimenté = [
     answer: 0
   }
 ];
+
 
 
