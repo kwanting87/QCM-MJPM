@@ -25,6 +25,7 @@ const qcmData = {
     expérimenté: [/* 20 questions */]
   }
 };
+
 function loadQuestion() {
   const theme = document.getElementById("theme").value;
   const niveau = document.getElementById("niveau").value;
@@ -63,6 +64,7 @@ function loadQuestion() {
     qcmBox.appendChild(btn);
   });
 }
+
 qcmData.santé.débutant = [
   {
     question: "Quel organisme attribue la CMU-C ?",
@@ -404,6 +406,7 @@ qcmData.santé.expérimenté = [
     answer: 0
   }
 ];
+
 
 
 
