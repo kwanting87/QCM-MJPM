@@ -12,7 +12,7 @@ let score = 0;
 let totalRéponses = 0;
 const questionsDéjàPosées = {};
 
-function loadQuestion() {
+function loadQuiz() {
   const theme = document.getElementById("theme").value;
   const niveau = document.getElementById("niveau").value;
   const qcmBox = document.getElementById("qcm");
@@ -3316,6 +3316,7 @@ qcmData.action.expérimenté = [
     ]
   }
 };
+
 
 
 
