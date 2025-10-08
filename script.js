@@ -86,9 +86,9 @@ function loadQuestion() {
     qcmBox.appendChild(btn);
   });
 }
-qcmData.santé.débutant
+qcmData.santé.débutant = [
   {
-    question: "Quel est le rôle principal de l'Agence Régionale de Santé (ARS) ?"
+    question: "Quel est le rôle principal de l'Agence Régionale de Santé (ARS) ?",
     options: [
       "Contrôler les professions libérales",
       "Gérer les hôpitaux privés",
@@ -296,9 +296,10 @@ qcmData.santé.débutant
     answer: [2],
     explanation: "Le MJPM veille à ce que le majeur protégé ait accès aux soins et que ses droits soient respectés."
   }
-qcmData.santé.intermédiaire
+];
+qcmData.santé.intermédiaire = [
   {
-    question: "Quel est le rôle du Conseil National de l’Ordre des Médecins ?"
+    question: "Quel est le rôle du Conseil National de l’Ordre des Médecins ?",
     options: [
       "Gérer les hôpitaux publics",
       "Sanctionner les patients",
@@ -406,9 +407,9 @@ qcmData.santé.intermédiaire
     ],
     answer: [2],
     explanation: "Le médecin de l’ARS vérifie la conformité des procédures d’hospitalisation sans consentement."
-  }
+  },
   {
-    question: "Quel est le rôle de la Conférence Régionale de la Santé et de l’Autonomie (CRSA) ?"
+    question: "Quel est le rôle de la Conférence Régionale de la Santé et de l’Autonomie (CRSA) ?",
     options: [
       "Décider des budgets hospitaliers",
       "Représenter les usagers et proposer des orientations régionales",
@@ -517,9 +518,9 @@ qcmData.santé.intermédiaire
     answer: [2],
     explanation: "Le MJPM doit respecter la volonté du majeur protégé, sauf danger grave, et alerter si nécessaire."
   }
-qcmData.santé.expérimenté
+qcmData.santé.expérimenté = [
   {
-    question: "Quel article du Code civil encadre la protection juridique des majeurs ?"
+    question: "Quel article du Code civil encadre la protection juridique des majeurs ?",
     options: [
       "Article L.1110-4",
       "Article 414-1",
@@ -627,7 +628,7 @@ qcmData.santé.expérimenté
     ],
     answer: [2],
     explanation: "Le MJPM veille au respect des volontés du majeur, notamment en matière de fin de vie et de soins palliatifs."
-  }
+  },
   {
     question: "Quel est le rôle du Comité d’éthique dans une recherche biomédicale ?",
     options: [
@@ -738,9 +739,9 @@ qcmData.santé.expérimenté
     answer: [1],
     explanation: "Le MJPM doit respecter la volonté du majeur, sauf danger grave, et peut alerter les autorités compétentes."
   }
-qcmData.patrimoine.débutant
+qcmData.patrimoine.débutant = [
   {
-    question: "Qu’est-ce que le patrimoine d’une personne ?"
+    question: "Qu’est-ce que le patrimoine d’une personne ?",
     options: [
       "L’ensemble de ses biens et de ses dettes",
       "Uniquement ses biens immobiliers",
@@ -958,10 +959,10 @@ qcmData.patrimoine.débutant
     ],
     answer: [2],
     explanation: "Le MJPM informe le notaire et veille à ce que les droits du majeur soient respectés dans la succession."
-  }
-qcmData.patrimoine.intermédiaire
+  },
+qcmData.patrimoine.intermédiaire = [
   {
-    question: "Quel acte nécessite l’autorisation du juge des tutelles pour un majeur sous tutelle ?"
+    question: "Quel acte nécessite l’autorisation du juge des tutelles pour un majeur sous tutelle ?",
     options: [
       "Le retrait d’espèces",
       "La vente d’un bien immobilier",
@@ -1069,7 +1070,7 @@ qcmData.patrimoine.intermédiaire
     ],
     answer: [1],
     explanation: "Le compte de gestion annuel retrace toutes les opérations patrimoniales effectuées par le MJPM."
-  }
+  },
   {
     question: "Quel est le rôle du MJPM dans la gestion d’un portefeuille d’actions ?",
     options: [
@@ -1179,10 +1180,10 @@ qcmData.patrimoine.intermédiaire
     ],
     answer: [1],
     explanation: "Le MJPM doit respecter les clauses de la donation et obtenir l’autorisation du juge pour toute vente ou modification."
-  }
-qcmData.patrimoine.expert
+  },
+qcmData.patrimoine.expert = [
   {
-    question: "Quel est le rôle du MJPM dans une succession avec passif supérieur à l’actif ?"
+    question: "Quel est le rôle du MJPM dans une succession avec passif supérieur à l’actif ?",
     options: [
       "Accepter la succession sans condition",
       "Refuser la succession sans autorisation",
@@ -1488,10 +1489,10 @@ qcmData.patrimoine.expert
     ],
     answer: [1],
     explanation: "La clause de retour conventionnel prévoit le retour du bien à la famille d’origine ; le MJPM doit la respecter."
-  }
-qcmData.famille.débutant
+  },
+qcmData.famille.débutant = [
   {
-    question: "Qu’est-ce qu’un lien de filiation ?"
+    question: "Qu’est-ce qu’un lien de filiation ?",
     options: [
       "Un lien entre deux époux",
       "Un lien entre un parent et son enfant",
@@ -1931,9 +1932,8 @@ qcmData.famille.intérmediaire
     ],
     answer: [0],
     explanation: "Le MJPM peut accompagner le majeur dans une demande de garde alternée, avec autorisation du juge."
-  }
-);
-qcmData.famille.expert
+  },
+qcmData.famille.expert = [
   {
     question: "Quel est le rôle du MJPM dans une procédure de retrait d’autorité parentale ?",
     options: [
@@ -2142,7 +2142,8 @@ qcmData.famille.expert
     ],
     answer: [0],
     explanation: "Le MJPM peut contester une renonciation à succession au nom du majeur protégé, avec autorisation du juge, notamment si elle est contraire à ses intérêts."
-  }
+  },
+
 
 
 
