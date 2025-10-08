@@ -3234,7 +3234,6 @@ const qcmData = {
     ],
     answer: 1,
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
-    ] }
 };
 
 let score = 0;
@@ -3313,3 +3312,4 @@ function loadQuiz() {
 }
 
 window.loadQuiz = loadQuiz;
+
