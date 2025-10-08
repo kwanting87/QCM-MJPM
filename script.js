@@ -3312,8 +3312,10 @@ qcmData.action.expérimenté = [
     ],
     answer: 1,
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
+ }
+    ]
   }
-  };
+};
 
 
 
