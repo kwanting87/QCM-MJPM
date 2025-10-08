@@ -3250,103 +3250,124 @@ const qcmData = {
     answer: 1,
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
 };
-// ✅ Correctif complet pour rendre ton QCM fonctionnel avec qcmData
-console.log("✅ Système QCM initialisé");
 
-// --- Normalisation des clés accentuées ---
+// ======= Patch robuste pour éviter ReferenceError et attacher le bouton =======
+
+// 1) Placeholder (préviens l'erreur si l'utilisateur clique avant l'initialisation)
+window.loadQuiz = window.loadQuiz || function () {
+  console.warn("loadQuiz appelé trop tôt — le script n'est pas encore initialisé.");
+};
+
+// 2) Ton code (normalize, getRandomQuestion, loadQuiz)
+// (Remplace uniquement si tu n'as pas déjà défini ces fonctions plus haut)
 function normalizeKey(k) {
+  if (typeof k !== "string") return "";
   return k.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-// --- Récupère une question aléatoire ---
 function getRandomQuestion(theme, niveau) {
-  const normalizedTheme = normalizeKey(theme);
-  const normalizedNiveau = normalizeKey(niveau);
+  try {
+    const normalizedTheme = normalizeKey(theme);
+    const normalizedNiveau = normalizeKey(niveau);
 
-  // Cherche le thème dans qcmData (en essayant les variantes)
-  const themeData =
-    qcmData[normalizedTheme] ||
-    qcmData[theme] ||
-    qcmData[theme.toLowerCase()] ||
-    null;
+    const themeData =
+      qcmData[normalizedTheme] ||
+      qcmData[theme] ||
+      qcmData[theme.toLowerCase()] ||
+      null;
 
-  if (!themeData) {
-    console.warn(`⚠️ Thème "${theme}" introuvable dans qcmData`);
+    if (!themeData) {
+      console.warn(`Thème "${theme}" introuvable.`);
+      return null;
+    }
+
+    const levelData =
+      themeData[normalizedNiveau] ||
+      themeData[niveau] ||
+      themeData[niveau.toLowerCase()] ||
+      themeData["debutant"] ||
+      themeData["intermediaire"] ||
+      themeData["experimente"] ||
+      null;
+
+    if (!Array.isArray(levelData) || levelData.length === 0) {
+      console.warn(`Niveau "${niveau}" introuvable pour "${theme}".`);
+      return null;
+    }
+
+    return levelData[Math.floor(Math.random() * levelData.length)];
+  } catch (err) {
+    console.error("Erreur getRandomQuestion:", err);
     return null;
   }
-
-  // Cherche le niveau (facile/débutant, moyen/intermédiaire, difficile/expérimenté)
-  const levelData =
-    themeData[normalizedNiveau] ||
-    themeData[niveau] ||
-    themeData[niveau.toLowerCase()] ||
-    themeData["debutant"] ||
-    themeData["intermediaire"] ||
-    themeData["experimente"] ||
-    null;
-
-  if (!Array.isArray(levelData) || levelData.length === 0) {
-    console.warn(`⚠️ Niveau "${niveau}" introuvable pour le thème "${theme}"`);
-    return null;
-  }
-
-  // Tire une question aléatoire
-  const randomIndex = Math.floor(Math.random() * levelData.length);
-  return levelData[randomIndex];
 }
 
-// --- Affiche une question ---
 function loadQuiz() {
-  const themeSelect = document.getElementById("theme");
-  const niveauSelect = document.getElementById("niveau");
-  const qcmContainer = document.getElementById("qcm");
+  try {
+    const themeSelect = document.getElementById("theme");
+    const niveauSelect = document.getElementById("niveau");
+    const qcmContainer = document.getElementById("qcm");
 
-  if (!themeSelect || !niveauSelect || !qcmContainer) {
-    console.error("❌ Impossible de trouver les éléments HTML (theme, niveau, qcm)");
-    return;
-  }
+    if (!themeSelect || !niveauSelect || !qcmContainer) {
+      console.error("Éléments HTML manquants : theme / niveau / qcm.");
+      return;
+    }
 
-  const theme = themeSelect.value;
-  const niveau = niveauSelect.value;
+    const theme = themeSelect.value;
+    const niveau = niveauSelect.value;
+    const questionObj = getRandomQuestion(theme, niveau);
 
-  const questionObj = getRandomQuestion(theme, niveau);
-  if (!questionObj) {
-    qcmContainer.innerHTML = `<p>Aucune question trouvée pour <strong>${theme}</strong> (${niveau}).</p>`;
-    return;
-  }
+    if (!questionObj) {
+      qcmContainer.innerHTML = `<p>Aucune question trouvée pour <strong>${theme}</strong> (${niveau}).</p>`;
+      return;
+    }
 
-  // --- Génère le contenu de la question ---
-  qcmContainer.innerHTML = `
-    <div class="qcm-block">
-      <h3>🧠 Question :</h3>
-      <div class="question">${questionObj.question}</div>
-      <ul class="options">
-        ${questionObj.options
-          .map((opt, i) => `<li data-index="${i}">${opt}</li>`)
-          .join("")}
-      </ul>
-      <div id="explanation" class="explanation" style="display:none;"></div>
-    </div>
-  `;
+    qcmContainer.innerHTML = `
+      <div class="qcm-block">
+        <h3>🧠 Question :</h3>
+        <div class="question">${questionObj.question}</div>
+        <ul class="options">
+          ${questionObj.options.map((opt, i) => `<li data-index="${i}">${opt}</li>`).join("")}
+        </ul>
+        <div id="explanation" class="explanation" style="display:none;"></div>
+      </div>
+    `;
 
-  // --- Gestion des clics sur les réponses ---
-  const options = qcmContainer.querySelectorAll(".options li");
-  const explanation = qcmContainer.querySelector("#explanation");
+    const options = qcmContainer.querySelectorAll(".options li");
+    const explanation = qcmContainer.querySelector("#explanation");
 
-  options.forEach(opt => {
-    opt.addEventListener("click", e => {
-      const index = parseInt(e.target.dataset.index);
-      options.forEach((li, j) => {
-        li.classList.remove("correct", "incorrect");
-        if (j === questionObj.answer) li.classList.add("correct");
-        else if (j === index) li.classList.add("incorrect");
-      });
-
-      explanation.style.display = "block";
-      explanation.innerHTML = `<strong>Explication :</strong> ${questionObj.explanation}`;
+    options.forEach(opt => {
+      opt.addEventListener("click", e => {
+        const index = parseInt(e.currentTarget.dataset.index, 10);
+        options.forEach((li, j) => {
+          li.classList.remove("correct", "incorrect");
+          if (j === questionObj.answer) li.classList.add("correct");
+          else if (j === index) li.classList.add("incorrect");
+        });
+        explanation.style.display = "block";
+        explanation.innerHTML = `<strong>Explication :</strong> ${questionObj.explanation || ""}`;
+      }, { once: true }); // once empêche les doubles-clics de retraiter
     });
-  });
+  } catch (err) {
+    console.error("Erreur loadQuiz:", err);
+  }
 }
 
-// ✅ Rendre la fonction accessible depuis le HTML (<button onclick="loadQuiz()">)
+// 3) Expose la fonction globalement (au cas où le HTML appelle loadQuiz())
 window.loadQuiz = loadQuiz;
+
+// 4) Sécurité : remplace l'onclick inline par un écouteur propre dès que DOM prêt
+document.addEventListener("DOMContentLoaded", () => {
+  // On cherche d'abord un bouton avec id startQuiz (id recommandé), sinon on cherche l'inline
+  let startBtn = document.getElementById("startQuiz");
+  if (!startBtn) startBtn = document.querySelector('button[onclick="loadQuiz()"]');
+
+  if (startBtn) {
+    // retire l'onclick inline pour éviter d'appeler une version non initialisée
+    startBtn.removeAttribute("onclick");
+    // attache l'écouteur
+    startBtn.addEventListener("click", loadQuiz);
+  } else {
+    console.warn("Bouton de démarrage introuvable (id=startQuiz ou onclick=\"loadQuiz()\")");
+  }
+});
