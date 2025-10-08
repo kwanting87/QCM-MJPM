@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>QCM MJPM</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    select {
+      margin-right: 10px;
+      padding: 5px;
+    }
+    .option {
+      margin: 8px 0;
+      padding: 10px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .option.correct {
+      background-color: #c8e6c9;
+    }
+    .option.incorrect {
+      background-color: #ffcdd2;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>QCM MJPM</h1>
 
-    <div class="selectors">
-      <label for="theme">Thème :</label>
-      <select id="theme">
-        <option value="santé">Santé</option>
-        <option value="patrimoine">Patrimoine</option>
-        <option value="famille">Famille</option>
-        <option value="procédures">Procédures</option>
-        <option value="action">Action du MJPM</option>
-      </select>
+  <h1>🧠 QCM MJPM</h1>
 
-      <label for="niveau">Niveau :</label>
-      <select id="niveau">
-        <option value="débutant">Débutant</option>
-        <option value="intermédiaire">Intermédiaire</option>
-        <option value="expérimenté">Expérimenté</option>
-      </select>
+  <label for="theme">Thème :</label>
+  <select id="theme">
+    <option value="santé">Santé</option>
+    <option value="patrimoine">Patrimoine</option>
+    <option value="famille">Famille</option>
+    <option value="procédures">Procédures</option>
+    <option value="action">Action</option>
+  </select>
 
-      <button onclick="loadQuestion()">Charger une question</button>
-    </div>
+  <label for="niveau">Niveau :</label>
+  <select id="niveau">
+    <option value="débutant">Débutant</option>
+    <option value="intermédiaire">Intermédiaire</option>
+    <option value="expérimenté">Expérimenté</option>
+  </select>
 
-    <div id="qcm" class="qcm-box"></div>
-  </div>
+  <button onclick="loadQuestion()">📩 Charger une question</button>
 
-  <script src="script.js"></script>
+  <div id="qcm" style="margin-top: 30px;"></div>
+
+  <script src="qcm.js"></script> <!-- Ton fichier JS -->
 </body>
 </html>
