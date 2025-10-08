@@ -26,7 +26,8 @@ const qcmData = {
   }
 };
 
-// Stockage des questions déjà posées
+let score = 0;
+let totalRéponses = 0;
 const questionsDéjàPosées = {};
 
 function loadQuestion() {
@@ -35,7 +36,6 @@ function loadQuestion() {
   const qcmBox = document.getElementById("qcm");
   qcmBox.innerHTML = "";
 
-  // Initialiser le suivi si nécessaire
   if (!questionsDéjàPosées[theme]) {
     questionsDéjàPosées[theme] = {};
   }
@@ -43,21 +43,17 @@ function loadQuestion() {
     questionsDéjàPosées[theme][niveau] = [];
   }
 
-  // Filtrer les questions non encore posées
   const toutesLesQuestions = qcmData[theme][niveau];
   const restantes = toutesLesQuestions.filter((q, i) => !questionsDéjàPosées[theme][niveau].includes(i));
 
   if (restantes.length === 0) {
-    qcmBox.innerHTML = "<p>✅ Toutes les questions ont été posées pour ce thème et ce niveau.</p>";
+    qcmBox.innerHTML = `<p>✅ Toutes les questions ont été posées pour ce thème et ce niveau.</p><p>🎯 Score final : ${score} / ${totalRéponses}</p>`;
     return;
   }
 
-  // Sélection aléatoire parmi les restantes
   const indexDansRestantes = Math.floor(Math.random() * restantes.length);
   const questionIndex = toutesLesQuestions.indexOf(restantes[indexDansRestantes]);
   const q = toutesLesQuestions[questionIndex];
-
-  // Marquer comme posée
   questionsDéjàPosées[theme][niveau].push(questionIndex);
 
   const questionEl = document.createElement("h3");
@@ -69,6 +65,7 @@ function loadQuestion() {
     btn.className = "option";
     btn.textContent = opt;
     btn.onclick = () => {
+      totalRéponses++;
       const allOptions = document.querySelectorAll(".option");
       allOptions.forEach((o, index) => {
         o.onclick = null;
@@ -80,6 +77,11 @@ function loadQuestion() {
           o.textContent += " ❌";
         }
       });
+      if (i === q.answer) score++;
+
+      const scoreEl = document.createElement("p");
+      scoreEl.innerHTML = `🧮 Score : ${score} / ${totalRéponses}`;
+      qcmBox.appendChild(scoreEl);
     };
     qcmBox.appendChild(btn);
   });
@@ -427,6 +429,7 @@ qcmData.santé.expérimenté = [
     answer: 0
   }
 ];
+
 
 
 
