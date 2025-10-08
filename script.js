@@ -3329,3 +3329,61 @@ function loadQuiz() {
 window.loadQuiz = loadQuiz;
 
 validateQCMStructure(qcmData);
+
+function validateQCMStructure(qcmData) {
+  const themes = Object.keys(qcmData);
+  let totalErrors = 0;
+
+  themes.forEach(theme => {
+    const niveaux = qcmData[theme];
+    if (!niveaux || typeof niveaux !== "object") {
+      console.error(`❌ Thème "${theme}" mal structuré.`);
+      totalErrors++;
+      return;
+    }
+
+    ["débutant", "intermédiaire", "expérimenté"].forEach(niveau => {
+      const questions = niveaux[niveau];
+      if (!Array.isArray(questions)) {
+        console.error(`❌ Niveau "${niveau}" du thème "${theme}" n'est pas un tableau.`);
+        totalErrors++;
+        return;
+      }
+
+      questions.forEach((q, index) => {
+        const path = `${theme} > ${niveau} > question ${index + 1}`;
+        if (!q || typeof q !== "object") {
+          console.error(`❌ ${path} : non objet`);
+          totalErrors++;
+          return;
+        }
+
+        if (typeof q.question !== "string") {
+          console.error(`❌ ${path} : question manquante ou non texte`);
+          totalErrors++;
+        }
+
+        if (!Array.isArray(q.options) || q.options.length !== 4 || !q.options.every(opt => typeof opt === "string")) {
+          console.error(`❌ ${path} : options mal formées`);
+          totalErrors++;
+        }
+
+        if (typeof q.answer !== "number" || q.answer < 0 || q.answer > 3) {
+          console.error(`❌ ${path} : answer invalide`);
+          totalErrors++;
+        }
+
+        if (typeof q.explanation !== "string") {
+          console.error(`❌ ${path} : explanation manquante ou non texte`);
+          totalErrors++;
+        }
+      });
+    });
+  });
+
+  if (totalErrors === 0) {
+    console.log("✅ Tous les blocs QCM sont valides !");
+  } else {
+    console.warn(`⚠️ ${totalErrors} erreur(s) détectée(s) dans la structure des QCM.`);
+  }
+}
