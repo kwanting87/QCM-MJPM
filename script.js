@@ -3313,22 +3313,3 @@ function loadQuiz() {
 }
 
 window.loadQuiz = loadQuiz;
-
-}
-]
-}
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
