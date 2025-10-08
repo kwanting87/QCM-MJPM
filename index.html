@@ -3,138 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>QCM MJPM</title>
-  <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-  }
-
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-
-  label {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-  select {
-    margin-bottom: 10px;
-    padding: 6px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  button {
-    padding: 10px 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-
-  button:hover {
-    background-color: #2980b9;
-  }
-
-  #qcm {
-    margin-top: 30px;
-  }
-
-  .qcm-block {
-    background: #f9f9fc;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  .qcm-block h3 {
-    font-size: 1.1rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-
-  .qcm-block .question {
-    font-weight: 600;
-    color: #34495e;
-    margin-bottom: 15px;
-  }
-
-  .qcm-block .options {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 15px;
-  }
-
-  .qcm-block .options li {
-    padding: 10px 14px;
-    margin-bottom: 8px;
-    background: #ecf0f1;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-    cursor: pointer;
-  }
-
-  .qcm-block .options li:hover {
-    background: #ddeaf0;
-  }
-
-  .qcm-block .options li.correct {
-    background: #d4edda;
-    border-left: 6px solid #28a745;
-    font-weight: bold;
-  }
-
-  .qcm-block .options li.incorrect {
-    background: #f8d7da;
-    border-left: 6px solid #dc3545;
-  }
-
-  .qcm-block .explanation {
-    font-size: 0.95rem;
-    color: #555;
-    background: #fff3cd;
-    border-left: 6px solid #ffc107;
-    padding: 12px 16px;
-    border-radius: 8px;
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🧠 QCM MJPM</h1>
+  <div class="container">
+    <h1>🧠 QCM MJPM</h1>
 
-  <label for="theme">Thème :</label>
-<select id="theme">
-  <option value="santé">Santé</option>
-  <option value="patrimoine">Patrimoine</option>
-  <option value="famille">Famille</option>
-  <option value="procédures">Procédures</option>
-  <option value="action">Action du MJPM</option>
-</select>
+    <div class="form-box">
+      <div class="selectors">
+        <label for="theme">Thème :</label>
+        <select id="theme">
+          <option value="santé">Santé</option>
+          <option value="patrimoine">Patrimoine</option>
+          <option value="famille">Famille</option>
+          <option value="procédures">Procédures</option>
+          <option value="action-mjpm">Action du MJPM</option>
+        </select>
 
-  <label for="niveau">Niveau :</label>
-<select id="niveau">
-  <option value="débutant">Débutant</option>
-  <option value="intermédiaire">Intermédiaire</option>
-  <option value="expérimenté">Expérimenté</option>
-</select>
+        <label for="niveau">Niveau :</label>
+        <select id="niveau">
+          <option value="débutant">Débutant</option>
+          <option value="intermédiaire">Intermédiaire</option>
+          <option value="expérimenté">Expérimenté</option>
+        </select>
 
-  <button onclick="loadQuiz()">Charger une question</button>
+        <button onclick="loadQuiz()">🎯 Charger une question</button>
+      </div>
+    </div>
 
-  <div id="qcm" style="margin-top: 30px;"></div>
+    <div id="qcm" class="qcm-box"></div>
+  </div>
 
-  <!-- ✅ Ton fichier JavaScript -->
-<script src="script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-
-
-
-
