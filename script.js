@@ -92,60 +92,58 @@ function loadQuestion() {
 }
 qcmData.santé.débutant = [
   {
-  question: "Quel organisme délivre la Carte Vitale ?",
-  options: [
-    "La CAF",
-    "La CPAM",
-    "L’ARS",
-    "La MDPH"
-  ],
-  answer: 1,
-  explanation: "La CPAM (Caisse Primaire d’Assurance Maladie) délivre la Carte Vitale aux assurés sociaux."
-},
-{
-  question: "Quel professionnel peut établir un certificat médical ?",
-  options: [
-    "Un médecin",
-    "Un pharmacien",
-    "Un infirmier",
-    "Un assistant social"
-  ],
-  answer: 0,
-  explanation: "Seul un médecin est habilité à établir un certificat médical."
-},
-{
-  question: "Quel est le rôle de la MDPH ?",
-  options: [
-    "Gérer les hôpitaux",
-    "Attribuer les aides aux personnes handicapées",
-    "Contrôler les médecins",
-    "Organiser les campagnes de vaccination"
-  ],
-  answer: 1,
-  explanation: "La MDPH attribue les aides et reconnaît les droits des personnes en situation de handicap."
-},
-{
-  question: "Que signifie le sigle CMU-C ?",
-  options: [
-    "Carte Médicale Universelle Complémentaire",
-    "Couverture Maladie Universelle Complémentaire",
-    "Centre Médical Universel Communal",
-    "Convention Médicale Unique Complémentaire"
-  ],
-  answer: 1,
-  explanation: "La CMU-C est la Couverture Maladie Universelle Complémentaire, destinée aux personnes à faibles ressources."
-},
-{
-  question: "Quel est le rôle du médecin traitant dans le parcours de soins ?",
-  options: [
-    "Il rédige les ordonnances hospitalières",
-    "Il coordonne les soins et oriente vers les spécialistes",
-    "Il contrôle les pharmacies",
-    "Il organise les urgences"
-  ],
-  answer: 1,
-  explanation: "Le médecin traitant est le pivot du parcours de soins coordonné."
-}
+    question: "Quel organisme délivre la Carte Vitale ?",
+    options: [
+      "La CAF",
+      "La CPAM",
+      "L’ARS",
+      "La MDPH"
+    ],
+    answer: 1,
+    explanation: "La CPAM (Caisse Primaire d’Assurance Maladie) délivre la Carte Vitale aux assurés sociaux."
+  },
+  {
+    question: "Quel professionnel peut établir un certificat médical ?",
+    options: [
+      "Un médecin",
+      "Un pharmacien",
+      "Un infirmier",
+      "Un assistant social"
+    ],
+    answer: 0,
+    explanation: "Seul un médecin est habilité à établir un certificat médical."
+  },
+  {
+    question: "Quel est le rôle de la MDPH ?",
+    options: [
+      "Gérer les hôpitaux",
+      "Attribuer les aides aux personnes handicapées",
+      "Contrôler les médecins",
+      "Organiser les campagnes de vaccination"
+    ],
+    answer: 1,
+    explanation: "La MDPH attribue les aides et reconnaît les droits des personnes en situation de handicap."
+  },
+  {
+    question: "Que signifie le sigle CMU-C ?",
+    options: [
+      "Carte Médicale Universelle Complémentaire",
+      "Couverture Maladie Universelle Complémentaire",
+      "Centre Médical Universel Communal",
+      "Convention Médicale Unique Complémentaire"
+    ],
+    answer: 1,
+    explanation: "La CMU-C est la Couverture Maladie Universelle Complémentaire, destinée aux personnes à faibles ressources."
+  },
+  {
+    question: "Quel est le rôle du médecin traitant dans le parcours de soins ?",
+    options: [
+      "Il rédige les ordonnances hospitalières",
+      "Il coordonne les soins et oriente vers les spécialistes",
+      "Il contrôle les pharmacies",
+      "Il organise les urgences"
+    ],
+    answer: 1,
+    explanation: "Le médecin traitant est le pivot du parcours de soins coordonné."
+  }
 ];
-
-
