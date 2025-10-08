@@ -86,8 +86,7 @@ function loadQuestion() {
     qcmBox.appendChild(btn);
   });
 }
-
-const santeDebutant = [
+qcmData.santé.débutant = [
   {
     question: "Quel est le rôle principal de l'Agence Régionale de Santé (ARS) ?"
     options: [
@@ -298,7 +297,7 @@ const santeDebutant = [
     explanation: "Le MJPM veille à ce que le majeur protégé ait accès aux soins et que ses droits soient respectés."
   }
 ];
-const santeIntermediaire = [
+qcmData.santé.intermédiaire = [
   {
     question: "Quel est le rôle du Conseil National de l’Ordre des Médecins ?"
     options: [
@@ -409,8 +408,6 @@ const santeIntermediaire = [
     answer: [2],
     explanation: "Le médecin de l’ARS vérifie la conformité des procédures d’hospitalisation sans consentement."
   }
-];
-const santeIntermediaireSuite = [
   {
     question: "Quel est le rôle de la Conférence Régionale de la Santé et de l’Autonomie (CRSA) ?"
     options: [
@@ -521,8 +518,7 @@ const santeIntermediaireSuite = [
     answer: [2],
     explanation: "Le MJPM doit respecter la volonté du majeur protégé, sauf danger grave, et alerter si nécessaire."
   }
-];
-const santeExpert = [
+qcmData.santé.expérimenté = [
   {
     question: "Quel article du Code civil encadre la protection juridique des majeurs ?"
     options: [
@@ -743,8 +739,8 @@ const santeExpert = [
     answer: [1],
     explanation: "Le MJPM doit respecter la volonté du majeur, sauf danger grave, et peut alerter les autorités compétentes."
   }
-];
-const patrimoineDebutant = [
+],
+qcmData.patrimoine.débutant = [
   {
     question: "Qu’est-ce que le patrimoine d’une personne ?"
     options: [
@@ -965,8 +961,7 @@ const patrimoineDebutant = [
     answer: [2],
     explanation: "Le MJPM informe le notaire et veille à ce que les droits du majeur soient respectés dans la succession."
   }
-];
-const patrimoineIntermediaire = [
+qcmData.patrimoine.intermédiaire = [
   {
     question: "Quel acte nécessite l’autorisation du juge des tutelles pour un majeur sous tutelle ?"
     options: [
@@ -1187,8 +1182,8 @@ const patrimoineIntermediaire = [
     answer: [1],
     explanation: "Le MJPM doit respecter les clauses de la donation et obtenir l’autorisation du juge pour toute vente ou modification."
   }
-];
-const patrimoineExpert = [
+],
+qcmData.patrimoine.expert = [
   {
     question: "Quel est le rôle du MJPM dans une succession avec passif supérieur à l’actif ?"
     options: [
@@ -1497,7 +1492,229 @@ const patrimoineExpert = [
     answer: [1],
     explanation: "La clause de retour conventionnel prévoit le retour du bien à la famille d’origine ; le MJPM doit la respecter."
   }
+qcmData.famille.débutant = [
+  {
+    question: "Qu’est-ce qu’un lien de filiation ?"
+    options: [
+      "Un lien entre deux époux",
+      "Un lien entre un parent et son enfant",
+      "Un lien entre deux frères",
+      "Un lien entre deux voisins"
+    ],
+    answer: [1],
+    explanation: "La filiation désigne le lien juridique entre un parent et son enfant."
+  },
+  {
+    question: "Quel document atteste de la filiation d’un enfant ?",
+    options: [
+      "Le livret de famille",
+      "La carte vitale",
+      "Le contrat de mariage",
+      "Le passeport"
+    ],
+    answer: [0],
+    explanation: "Le livret de famille contient les actes de naissance et atteste de la filiation."
+  },
+  {
+    question: "Quel est le rôle du juge aux affaires familiales ?",
+    options: [
+      "Soigner les patients",
+      "Gérer les successions",
+      "Régler les conflits familiaux",
+      "Organiser les soins médicaux"
+    ],
+    answer: [2],
+    explanation: "Le juge aux affaires familiales intervient dans les conflits liés au divorce, à la garde d’enfants, etc."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans les relations familiales du majeur protégé ?",
+    options: [
+      "Remplacer la famille",
+      "Interdire les visites",
+      "Respecter les liens familiaux et favoriser la communication",
+      "Organiser les soins médicaux"
+    ],
+    answer: [2],
+    explanation: "Le MJPM doit respecter les liens familiaux et favoriser les relations dans l’intérêt du majeur."
+  },
+  {
+    question: "Quel est le rôle du livret de famille ?",
+    options: [
+      "Gérer les comptes bancaires",
+      "Attester des liens familiaux",
+      "Organiser les soins médicaux",
+      "Servir de carte d’identité"
+    ],
+    answer: [1],
+    explanation: "Le livret de famille regroupe les actes d’état civil et atteste des liens familiaux."
+  },
+  {
+    question: "Quel est le rôle du MJPM en cas de conflit familial ?",
+    options: [
+      "Prendre parti",
+      "Organiser une médiation",
+      "Ignorer le conflit",
+      "Refuser tout contact"
+    ],
+    answer: [1],
+    explanation: "Le MJPM peut favoriser la médiation pour préserver les intérêts du majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du juge des tutelles dans les relations familiales ?",
+    options: [
+      "Organiser les soins médicaux",
+      "Décider des visites familiales",
+      "Autoriser ou interdire certains actes en cas de conflit",
+      "Gérer les comptes bancaires"
+    ],
+    answer: [2],
+    explanation: "Le juge peut intervenir pour autoriser ou interdire certains actes en cas de conflit familial."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de divorce ?",
+    options: [
+      "Il est partie au divorce",
+      "Il représente le majeur protégé si celui-ci est concerné",
+      "Il rédige les actes de divorce",
+      "Il organise les soins médicaux"
+    ],
+    answer: [1],
+    explanation: "Le MJPM peut représenter le majeur protégé dans une procédure de divorce si celui-ci est concerné."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des relations avec les enfants du majeur protégé ?",
+    options: [
+      "Interdire les contacts",
+      "Organiser les visites",
+      "Favoriser les liens familiaux dans l’intérêt du majeur",
+      "Décider de la garde"
+    ],
+    answer: [2],
+    explanation: "Le MJPM doit favoriser les liens familiaux dans le respect de la volonté et de l’intérêt du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure d’adoption ?",
+    options: [
+      "Il adopte le majeur",
+      "Il organise les soins médicaux",
+      "Il peut être consulté si le majeur protégé est concerné",
+      "Il rédige les actes d’adoption"
+    ],
+    answer: [2],
+    explanation: "Le MJPM peut être consulté si le majeur protégé est concerné par une procédure d’adoption."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des relations avec les frères et sœurs du majeur ?",
+    options: [
+      "Interdire les contacts",
+      "Favoriser les liens familiaux",
+      "Organiser les soins médicaux",
+      "Gérer les comptes bancaires"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit favoriser les liens familiaux dans le respect de la volonté du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de changement de nom ?",
+    options: [
+      "Il décide seul",
+      "Il organise les soins médicaux",
+      "Il peut accompagner le majeur dans la procédure",
+      "Il rédige les actes"
+    ],
+    answer: [2],
+    explanation: "Le MJPM peut accompagner le majeur dans une procédure de changement de nom, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de reconnaissance de paternité ?",
+    options: [
+      "Il peut représenter le majeur",
+      "Il organise les soins médicaux",
+      "Il rédige les actes",
+      "Il décide seul"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut représenter le majeur dans une procédure de reconnaissance de paternité."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation de filiation ?",
+    options: [
+      "Il peut engager la procédure avec autorisation du juge",
+      "Il organise les soins médicaux",
+      "Il rédige les actes",
+      "Il décide seul"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut engager une procédure de contestation de filiation avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des relations avec le conjoint du majeur ?",
+    options: [
+      "Interdire les contacts",
+      "Organiser les soins médicaux",
+      "Respecter les liens conjugaux et favoriser la communication",
+      "Décider du divorce"
+    ],
+    answer: [2],
+    explanation: "Le MJPM doit respecter les liens conjugaux et favoriser la communication dans l’intérêt du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de mariage ?",
+    options: [
+      "Il peut interdire le mariage",
+      "Il organise les soins médicaux",
+      "Il peut être consulté et le juge peut autoriser ou refuser le mariage",
+      "Il rédige les actes"
+    ],
+    answer: [2],
+    explanation: "Le MJPM peut être consulté et le juge décide de l’autorisation du mariage pour un majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de PACS ?",
+    options: [
+      "Il peut interdire le PACS",
+      "Il organise les soins médicaux",
+      "Il peut accompagner le majeur et solliciter l’autorisation du juge",
+      "Il rédige les actes"
+    ],
+    answer: [2],
+    explanation: "Le MJPM peut accompagner le majeur dans une procédure de PACS, avec autorisation du juge si nécessaire."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de rupture de PACS ?",
+    options: [
+      "Il peut organiser la rupture seul",
+      "Il doit respecter la volonté du majeur et informer le juge",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit respecter la volonté du majeur et informer le juge en cas de rupture de PACS."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de divorce par consentement mutuel ?",
+    options: [
+      "Il peut signer seul",
+      "Il doit accompagner le majeur et obtenir l’autorisation du juge",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [1],
+    explanation: "Le MJPM accompagne le majeur et doit obtenir l’autorisation du juge pour signer un divorce par consentement mutuel."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de protection de l’enfant du majeur ?",
+    options: [
+      "Il organise les soins médicaux",
+      "Il peut alerter les autorités compétentes",
+      "Il rédige les actes",
+      "Il décide seul de la garde"
+    ],
+    answer: [1],
+    explanation: "Le MJPM peut alerter les autorités compétentes s’il constate un danger pour l’enfant du majeur protégé."
+  }
 ];
+
 
 
 
