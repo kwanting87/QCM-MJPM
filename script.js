@@ -570,7 +570,7 @@ const qcmData = {
     explanation: "Le MJPM doit saisir les autorités compétentes en cas de refus de soins injustifié."
   },
     ] 
-  }
+  },
   
   patrimoine: { 
     débutant: [
@@ -1240,7 +1240,7 @@ const qcmData = {
     answer: 0,
     explanation: "Le MJPM peut saisir le juge ou faire appel à un professionnel pour résoudre un litige fiscal complexe."
   }
-    ] }
+    ] },
   
   famille: { 
     débutant: [
@@ -1910,7 +1910,7 @@ const qcmData = {
     answer: 1,
     explanation: "Le MJPM veille à préserver l’autonomie du majeur dans une situation de dépendance affective."
   }
-    ] }
+    ] },
   
   procédures: { 
     débutant: [
@@ -2580,7 +2580,7 @@ const qcmData = {
     answer: 1,
     explanation: "Le MJPM peut contester une habilitation familiale s’il estime qu’elle nuit au majeur."
   }
-    ] }
+    ] },
   
   action: { 
     débutant: [
@@ -3387,3 +3387,4 @@ function validateQCMStructure(qcmData) {
     console.warn(`⚠️ ${totalErrors} erreur(s) détectée(s) dans la structure des QCM.`);
   }
 }
+
