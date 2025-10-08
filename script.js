@@ -3027,7 +3027,7 @@ const qcmData = {
     explanation: "Le MJPM agit pour rétablir les droits du majeur et peut saisir le juge si nécessaire."
   }
    ], 
-    
+  
     expérimenté: [
       {
     question: "Que doit faire le MJPM si le majeur protégé refuse une aide essentielle ?",
@@ -3328,4 +3328,5 @@ function loadQuiz() {
 window.loadQuiz = loadQuiz;
 
 validateQCMStructure(qcmData);
+
 
