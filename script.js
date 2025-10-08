@@ -648,7 +648,7 @@ qcmData.santé.expérimenté = [
     ],
     answer: 0,
     explanation: "Le MJPM doit saisir les autorités compétentes en cas de refus de soins injustifié."
-  }
+  };
 qcmData.patrimoine.débutant = [
   {
     question: "Qu’est-ce qu’un patrimoine ?",
@@ -3313,6 +3313,7 @@ qcmData.action.expérimenté = [
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
   }
 ];
+
 
 
 
