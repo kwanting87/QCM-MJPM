@@ -3250,27 +3250,61 @@ const qcmData = {
     answer: 1,
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
 };
-// ✅ Correctif minimal pour rendre ton QCM fonctionnel
+// ✅ Correctif complet pour rendre ton QCM fonctionnel avec qcmData
 console.log("✅ Système QCM initialisé");
 
+// --- Normalisation des clés accentuées ---
 function normalizeKey(k) {
   return k.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
+// --- Récupère une question aléatoire ---
 function getRandomQuestion(theme, niveau) {
   const normalizedTheme = normalizeKey(theme);
   const normalizedNiveau = normalizeKey(niveau);
-  const themeData = qcmData[normalizedTheme] || qcmData[theme] || qcmData[theme.toLowerCase()];
-  if (!themeData) return null;
-  const levelData = themeData[normalizedNiveau] || themeData[niveau] || themeData[niveau.toLowerCase()];
-  if (!Array.isArray(levelData) || levelData.length === 0) return null;
-  return levelData[Math.floor(Math.random() * levelData.length)];
+
+  // Cherche le thème dans qcmData (en essayant les variantes)
+  const themeData =
+    qcmData[normalizedTheme] ||
+    qcmData[theme] ||
+    qcmData[theme.toLowerCase()] ||
+    null;
+
+  if (!themeData) {
+    console.warn(`⚠️ Thème "${theme}" introuvable dans qcmData`);
+    return null;
+  }
+
+  // Cherche le niveau (facile/débutant, moyen/intermédiaire, difficile/expérimenté)
+  const levelData =
+    themeData[normalizedNiveau] ||
+    themeData[niveau] ||
+    themeData[niveau.toLowerCase()] ||
+    themeData["debutant"] ||
+    themeData["intermediaire"] ||
+    themeData["experimente"] ||
+    null;
+
+  if (!Array.isArray(levelData) || levelData.length === 0) {
+    console.warn(`⚠️ Niveau "${niveau}" introuvable pour le thème "${theme}"`);
+    return null;
+  }
+
+  // Tire une question aléatoire
+  const randomIndex = Math.floor(Math.random() * levelData.length);
+  return levelData[randomIndex];
 }
 
+// --- Affiche une question ---
 function loadQuiz() {
   const themeSelect = document.getElementById("theme");
   const niveauSelect = document.getElementById("niveau");
   const qcmContainer = document.getElementById("qcm");
+
+  if (!themeSelect || !niveauSelect || !qcmContainer) {
+    console.error("❌ Impossible de trouver les éléments HTML (theme, niveau, qcm)");
+    return;
+  }
 
   const theme = themeSelect.value;
   const niveau = niveauSelect.value;
@@ -3281,6 +3315,7 @@ function loadQuiz() {
     return;
   }
 
+  // --- Génère le contenu de la question ---
   qcmContainer.innerHTML = `
     <div class="qcm-block">
       <h3>🧠 Question :</h3>
@@ -3294,6 +3329,7 @@ function loadQuiz() {
     </div>
   `;
 
+  // --- Gestion des clics sur les réponses ---
   const options = qcmContainer.querySelectorAll(".options li");
   const explanation = qcmContainer.querySelector("#explanation");
 
@@ -3305,8 +3341,12 @@ function loadQuiz() {
         if (j === questionObj.answer) li.classList.add("correct");
         else if (j === index) li.classList.add("incorrect");
       });
+
       explanation.style.display = "block";
       explanation.innerHTML = `<strong>Explication :</strong> ${questionObj.explanation}`;
     });
   });
 }
+
+// ✅ Rendre la fonction accessible depuis le HTML (<button onclick="loadQuiz()">)
+window.loadQuiz = loadQuiz;
