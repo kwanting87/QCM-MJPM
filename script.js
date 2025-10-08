@@ -1,15 +1,25 @@
+// 1️⃣ Déclaration des données et variables globales
+const qcmData = {
+  santé: { débutant: [], intermédiaire: [], expérimenté: [] },
+  patrimoine: { débutant: [], intermédiaire: [], expérimenté: [] },
+  famille: { débutant: [], intermédiaire: [], expérimenté: [] },
+  procédures: { débutant: [], intermédiaire: [], expérimenté: [] },
+  action: { débutant: [], intermédiaire: [], expérimenté: [] }
+};
+
+let score = 0;
+let totalRéponses = 0;
+const questionsDéjàPosées = {};
+
+// 2️⃣ Fonction principale
 function loadQuestion() {
   const theme = document.getElementById("theme").value;
   const niveau = document.getElementById("niveau").value;
   const qcmBox = document.getElementById("qcm");
   qcmBox.innerHTML = "";
 
-  if (!questionsDéjàPosées[theme]) {
-    questionsDéjàPosées[theme] = {};
-  }
-  if (!questionsDéjàPosées[theme][niveau]) {
-    questionsDéjàPosées[theme][niveau] = [];
-  }
+  if (!questionsDéjàPosées[theme]) questionsDéjàPosées[theme] = {};
+  if (!questionsDéjàPosées[theme][niveau]) questionsDéjàPosées[theme][niveau] = [];
 
   const toutesLesQuestions = qcmData[theme][niveau];
   const restantes = toutesLesQuestions.filter((_, i) => !questionsDéjàPosées[theme][niveau].includes(i));
@@ -24,7 +34,6 @@ function loadQuestion() {
   const q = toutesLesQuestions[questionIndex];
   questionsDéjàPosées[theme][niveau].push(questionIndex);
 
-  // 🧱 Création du bloc QCM stylé
   const block = document.createElement("div");
   block.className = "qcm-block";
 
@@ -74,124 +83,8 @@ function loadQuestion() {
   qcmBox.appendChild(block);
 }
 
-// ✅ Rendre la fonction accessible au HTML
+// 3️⃣ Rendre la fonction accessible au HTML
 window.loadQuestion = loadQuestion;
-Tu peux maintenant garder ton fichier script.js tel quel, avec tes 300 questions, et ton bouton HTML fonctionnera parfaitement 🎯
-
-Tu veux que je t’aide à ajouter un bouton “Suivante” ou à afficher les questions restantes ?
-
-QCM-MJPM/:129 Uncaught ReferenceError: loadQuestion is not defined at HTMLButtonElement.onclick (QCM-MJPM/:129:34)
-Merci pour ta vigilance Quentin 🙌. L’erreur Uncaught ReferenceError: loadQuestion is not defined signifie que ton fichier script.js est bien chargé après ton HTML, mais que la fonction loadQuestion() n’est pas visible dans le contexte global au moment du clic.
-
-Tu as déjà bien défini la fonction, donc la solution est simple :
-
-✅ Ajoute cette ligne à la fin de ton fichier script.js :
-js
-window.loadQuestion = loadQuestion;
-📍 Où exactement ?
-Juste après la dernière accolade fermante de ta fonction loadQuestion() — et avant ton tableau qcmData si celui-ci est défini en dessous.
-
-Si ton fichier ressemble à :
-
-js
-function loadQuestion() {
-  // ... ton code ...
-}
-
-window.loadQuestion = loadQuestion;
-
-// Ensuite ton qcmData = { ... }
-C’est parfait ✅
-
-🧠 Pourquoi ça fonctionne
-Ton bouton HTML utilise onclick="loadQuestion()", ce qui appelle une fonction dans le contexte global (window). En ajoutant window.loadQuestion = loadQuestion, tu exposes explicitement ta fonction au HTML.
-
-Tu peux maintenant tester : recharge la page, ouvre la console (F12), clique sur le bouton, et tu devrais voir ta question s’afficher 🎉
-
-Tu veux que je t’aide à ajouter un bouton “Suivante” ou à afficher les questions restantes ?
-
-J'ai bien : <button onclick="loadQuestion()">📩 Charger une question</button> et qcmBox.appendChild(block); } // ✅ Rendre la fonction accessible au HTML window.loadQuestion = loadQuestion; qcmData.santé.débutant = [
-Parfait Quentin, tu es tout près du but 💪. Ton placement est presque bon, mais il y a un petit détail crucial à corriger :
-
-🧠 Le problème
-Tu as mis :
-
-js
-qcmBox.appendChild(block);
-}
-
-// ✅ Rendre la fonction accessible au HTML
-window.loadQuestion = loadQuestion;
-
-qcmData.santé.débutant = [
-Mais les lignes qcmBox.appendChild(block); et } sont la fin de ta fonction, et juste après tu as window.loadQuestion = loadQuestion;, ce qui est parfait ✅.
-
-Le souci vient probablement d’un ordre de déclaration : si tu déclares qcmData.santé.débutant = [...] après cette ligne, mais que qcmData n’a pas encore été défini, alors le navigateur plante.
-
-✅ Solution : déclare qcmData avant tout
-Assure-toi que ton fichier commence par :
-
-js
-const qcmData = {
-  santé: { débutant: [], intermédiaire: [], expérimenté: [] },
-  patrimoine: { débutant: [], intermédiaire: [], expérimenté: [] },
-  famille: { débutant: [], intermédiaire: [], expérimenté: [] },
-  procédures: { débutant: [], intermédiaire: [], expérimenté: [] },
-  action: { débutant: [], intermédiaire: [], expérimenté: [] }
-};
-
-let score = 0;
-let totalRéponses = 0;
-const questionsDéjàPosées = {};
-Puis ensuite tu peux remplir :
-
-js
-qcmData.santé.débutant = [
-  {
-    question: "Exemple de question...",
-    options: ["A", "B", "C", "D"],
-    answer: 2,
-    explanation: "Explication ici."
-  }
-];
-Et enfin ta fonction loadQuestion() + window.loadQuestion = loadQuestion;
-
-📦 Ordre recommandé dans script.js
-js
-// 1. Déclaration des variables
-const qcmData = { ... };
-let score = 0;
-let totalRéponses = 0;
-const questionsDéjàPosées = {};
-
-// 2. Remplissage des questions
-qcmData.santé.débutant = [ ... ];
-qcmData.action.expérimenté = [ ... ];
-// etc.
-
-// 3. Fonction loadQuestion()
-function loadQuestion() {
-  // ... ton code ...
-}
-window.loadQuestion = loadQuestion;
-Tu veux que je te génère un squelette complet avec une question MJPM pour tester en direct ?
-
-function loadQuestion() { const theme = document.getElementById("theme").value; const niveau = document.getElementById("niveau").value; const qcmBox = document.getElementById("qcm"); qcmBox.innerHTML = ""; if (!questionsDéjàPosées[theme]) { questionsDéjàPosées[theme] = {}; } if (!questionsDéjàPosées[theme][niveau]) { questionsDéjàPosées[theme][niveau] = []; } const toutesLesQuestions = qcmData[theme][niveau]; const restantes = toutesLesQuestions.filter((_, i) => !questionsDéjàPosées[theme][niveau].includes(i)); if (restantes.length === 0) { qcmBox.innerHTML = `<p>✅ Toutes les questions ont été posées pour ce thème et ce niveau.</p><p>🎯 Score final : ${score} / ${totalRéponses}</p>`; return; } const indexDansRestantes = Math.floor(Math.random() * restantes.length); const questionIndex = toutesLesQuestions.indexOf(restantes[indexDansRestantes]); const q = toutesLesQuestions[questionIndex]; questionsDéjàPosées[theme][niveau].push(questionIndex); // 🧱 Création du bloc QCM stylé const block = document.createElement("div"); block.className = "qcm-block"; const titre = document.createElement("h3"); titre.textContent = `🧠 Question ${totalRéponses + 1}`; block.appendChild(titre); const questionText = document.createElement("div"); questionText.className = "question"; questionText.textContent = q.question; block.appendChild(questionText); const optionsList = document.createElement("ul"); optionsList.className = "options"; q.options.forEach((opt, i) => { const li = document.createElement("li"); li.textContent = `${String.fromCharCode(65 + i)}) ${opt}`; li.onclick = () => { totalRéponses++; const allOptions = optionsList.querySelectorAll("li"); allOptions.forEach((o, index) => { o.onclick = null; if (index === q.answer) { o.classList.add("correct"); o.textContent += " ✅"; } else if (index === i) { o.classList.add("incorrect"); o.textContent += " ❌"; } }); if (i === q.answer) score++; const scoreEl = document.createElement("p"); scoreEl.innerHTML = `🧮 <strong>Score :</strong> ${score} / ${totalRéponses}`; block.appendChild(scoreEl); const explicationEl = document.createElement("div"); explicationEl.className = "explanation"; explicationEl.innerHTML = `💡 <strong>Explication :</strong> ${q.explanation}`; block.appendChild(explicationEl); }; optionsList.appendChild(li); }); block.appendChild(optionsList); qcmBox.appendChild(block); } // ✅ Rendre la fonction accessible au HTML window.loadQuestion = loadQuestion; qcmData.santé.débutant = [
-Merci Quentin, ton code est presque parfait — mais l’erreur vient du fait que tu appelles window.loadQuestion = loadQuestion; avant que loadQuestion soit connu du navigateur.
-
-Et surtout, tu fais cette déclaration avant d’avoir défini qcmData, ce qui provoque une autre erreur : qcmData is not defined.
-
-✅ Voici comment corriger proprement ton script.js
-Tu dois respecter cet ordre :
-
-Définir qcmData et les variables globales
-
-Définir la fonction loadQuestion()
-
-Rendre la fonction accessible au HTML
-
-🧩 Code corrigé et ordonné
-js
 
 qcmData.santé.débutant = [
   {
@@ -3422,6 +3315,7 @@ qcmData.action.expérimenté = [
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
   }
 ];
+
 
 
 
