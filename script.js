@@ -89,7 +89,7 @@ function loadQuestion() {
 
 const santeDebutant = [
   {
-    question: "Quel est le rôle principal de l'Agence Régionale de Santé (ARS) ?",
+    question: "Quel est le rôle principal de l'Agence Régionale de Santé (ARS) ?"
     options: [
       "Contrôler les professions libérales",
       "Gérer les hôpitaux privés",
@@ -300,7 +300,7 @@ const santeDebutant = [
 ];
 const santeIntermediaire = [
   {
-    question: "Quel est le rôle du Conseil National de l’Ordre des Médecins ?",
+    question: "Quel est le rôle du Conseil National de l’Ordre des Médecins ?"
     options: [
       "Gérer les hôpitaux publics",
       "Sanctionner les patients",
@@ -412,7 +412,7 @@ const santeIntermediaire = [
 ];
 const santeIntermediaireSuite = [
   {
-    question: "Quel est le rôle de la Conférence Régionale de la Santé et de l’Autonomie (CRSA) ?",
+    question: "Quel est le rôle de la Conférence Régionale de la Santé et de l’Autonomie (CRSA) ?"
     options: [
       "Décider des budgets hospitaliers",
       "Représenter les usagers et proposer des orientations régionales",
@@ -524,7 +524,7 @@ const santeIntermediaireSuite = [
 ];
 const santeExpert = [
   {
-    question: "Quel article du Code civil encadre la protection juridique des majeurs ?",
+    question: "Quel article du Code civil encadre la protection juridique des majeurs ?"
     options: [
       "Article L.1110-4",
       "Article 414-1",
@@ -744,6 +744,762 @@ const santeExpert = [
     explanation: "Le MJPM doit respecter la volonté du majeur, sauf danger grave, et peut alerter les autorités compétentes."
   }
 ];
+const patrimoineDebutant = [
+  {
+    question: "Qu’est-ce que le patrimoine d’une personne ?"
+    options: [
+      "L’ensemble de ses biens et de ses dettes",
+      "Uniquement ses biens immobiliers",
+      "Ses diplômes et compétences",
+      "Son état de santé"
+    ],
+    answer: [0],
+    explanation: "Le patrimoine regroupe l’ensemble des biens, droits et obligations à caractère économique d’une personne."
+  },
+  {
+    question: "Quel document permet de prouver la propriété d’un bien immobilier ?",
+    options: [
+      "La carte vitale",
+      "Le livret de famille",
+      "L’acte notarié",
+      "Le contrat de travail"
+    ],
+    answer: [2],
+    explanation: "L’acte notarié, enregistré au service de publicité foncière, atteste de la propriété d’un bien immobilier."
+  },
+  {
+    question: "Qui peut établir un inventaire du patrimoine d’un majeur protégé ?",
+    options: [
+      "Le médecin traitant",
+      "Le MJPM",
+      "Le juge des tutelles",
+      "Le notaire uniquement"
+    ],
+    answer: [1],
+    explanation: "Le MJPM peut établir un inventaire du patrimoine dans le cadre de sa mission de protection."
+  },
+  {
+    question: "Quel bien fait partie du patrimoine mobilier ?",
+    options: [
+      "Une maison",
+      "Un terrain",
+      "Une voiture",
+      "Un appartement"
+    ],
+    answer: [2],
+    explanation: "Les biens mobiliers sont les objets que l’on peut déplacer, comme une voiture ou des meubles."
+  },
+  {
+    question: "Quel bien fait partie du patrimoine immobilier ?",
+    options: [
+      "Un compte bancaire",
+      "Une œuvre d’art",
+      "Un appartement",
+      "Une voiture"
+    ],
+    answer: [2],
+    explanation: "Les biens immobiliers sont les biens fixés au sol, comme les maisons ou les appartements."
+  },
+  {
+    question: "Quel organisme gère les comptes bancaires d’un majeur protégé ?",
+    options: [
+      "La CAF",
+      "La CPAM",
+      "La banque",
+      "Le MJPM"
+    ],
+    answer: [3],
+    explanation: "Le MJPM gère les comptes bancaires du majeur protégé dans le respect de ses intérêts."
+  },
+  {
+    question: "Quel document permet de suivre les mouvements d’un compte bancaire ?",
+    options: [
+      "Le relevé de compte",
+      "Le livret de famille",
+      "La carte bancaire",
+      "Le contrat de curatelle"
+    ],
+    answer: [0],
+    explanation: "Le relevé de compte détaille les opérations effectuées sur un compte bancaire."
+  },
+  {
+    question: "Quel professionnel peut aider à estimer la valeur d’un bien immobilier ?",
+    options: [
+      "Un MJPM",
+      "Un médecin",
+      "Un agent immobilier",
+      "Un avocat"
+    ],
+    answer: [2],
+    explanation: "L’agent immobilier est compétent pour estimer la valeur d’un bien immobilier."
+  },
+  {
+    question: "Quel est le rôle du notaire dans la gestion du patrimoine ?",
+    options: [
+      "Soigner les patients",
+      "Gérer les comptes bancaires",
+      "Rédiger les actes juridiques et authentifier les transactions",
+      "Organiser les soins médicaux"
+    ],
+    answer: [2],
+    explanation: "Le notaire rédige les actes de vente, de donation, de succession et les authentifie."
+  },
+  {
+    question: "Quel document est nécessaire pour vendre un bien immobilier ?",
+    options: [
+      "Un certificat médical",
+      "Un acte de naissance",
+      "Un acte de propriété",
+      "Une carte d’identité"
+    ],
+    answer: [2],
+    explanation: "L’acte de propriété prouve que la personne est bien propriétaire du bien à vendre."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion du patrimoine ?",
+    options: [
+      "Décider seul des ventes",
+      "Gérer les biens dans l’intérêt du majeur protégé",
+      "Investir librement en bourse",
+      "Organiser les soins médicaux"
+    ],
+    answer: [1],
+    explanation: "Le MJPM agit dans l’intérêt du majeur protégé, avec autorisation du juge si nécessaire."
+  },
+  {
+    question: "Quel bien peut être considéré comme un actif financier ?",
+    options: [
+      "Une voiture",
+      "Un compte bancaire",
+      "Un contrat de travail",
+      "Un certificat médical"
+    ],
+    answer: [1],
+    explanation: "Les actifs financiers regroupent les comptes, livrets, actions, obligations, etc."
+  },
+  {
+    question: "Quel document est utilisé pour déclarer les revenus et le patrimoine ?",
+    options: [
+      "La carte vitale",
+      "La déclaration d’impôts",
+      "Le livret de famille",
+      "Le contrat de travail"
+    ],
+    answer: [1],
+    explanation: "La déclaration d’impôts permet de déclarer les revenus et certains éléments du patrimoine."
+  },
+  {
+    question: "Quel bien peut être transmis par donation ?",
+    options: [
+      "Uniquement les biens immobiliers",
+      "Uniquement les comptes bancaires",
+      "Tout type de bien, mobilier ou immobilier",
+      "Uniquement les voitures"
+    ],
+    answer: [2],
+    explanation: "La donation peut porter sur tout type de bien, mobilier ou immobilier."
+  },
+  {
+    question: "Quel est le rôle du juge des tutelles dans la gestion du patrimoine ?",
+    options: [
+      "Décider des soins médicaux",
+      "Autoriser certains actes de disposition",
+      "Gérer les comptes bancaires",
+      "Organiser les animations"
+    ],
+    answer: [1],
+    explanation: "Le juge autorise les actes importants comme la vente d’un bien ou une donation."
+  },
+  {
+    question: "Quel document peut attester de la valeur d’un bien mobilier ?",
+    options: [
+      "Un certificat médical",
+      "Une facture",
+      "Un acte de naissance",
+      "Un contrat de travail"
+    ],
+    answer: [1],
+    explanation: "La facture permet d’attester de la valeur d’un bien mobilier."
+  },
+  {
+    question: "Quel bien peut être considéré comme un passif ?",
+    options: [
+      "Un compte bancaire",
+      "Une dette",
+      "Une maison",
+      "Une voiture"
+    ],
+    answer: [1],
+    explanation: "Le passif regroupe les dettes et obligations financières d’une personne."
+  },
+  {
+    question: "Quel est le rôle du livret A ?",
+    options: [
+      "Stocker les données médicales",
+      "Servir de carte d’identité",
+      "Permettre une épargne sécurisée",
+      "Gérer les soins médicaux"
+    ],
+    answer: [2],
+    explanation: "Le livret A est un produit d’épargne réglementé, accessible à tous."
+  },
+  {
+    question: "Quel professionnel peut être sollicité pour gérer un patrimoine complexe ?",
+    options: [
+      "Un médecin",
+      "Un avocat",
+      "Un gestionnaire de patrimoine",
+      "Un pharmacien"
+    ],
+    answer: [2],
+    explanation: "Le gestionnaire de patrimoine conseille et optimise la gestion des biens et placements."
+  },
+  {
+    question: "Quel est le rôle du MJPM face à une succession ?",
+    options: [
+      "Organiser les funérailles",
+      "Refuser les héritiers",
+      "Informer le notaire et protéger les intérêts du majeur",
+      "Décider seul du partage"
+    ],
+    answer: [2],
+    explanation: "Le MJPM informe le notaire et veille à ce que les droits du majeur soient respectés dans la succession."
+  }
+];
+const patrimoineIntermediaire = [
+  {
+    question: "Quel acte nécessite l’autorisation du juge des tutelles pour un majeur sous tutelle ?"
+    options: [
+      "Le retrait d’espèces",
+      "La vente d’un bien immobilier",
+      "Le paiement d’une facture",
+      "L’ouverture d’un livret A"
+    ],
+    answer: [1],
+    explanation: "La vente d’un bien immobilier est un acte de disposition qui nécessite l’autorisation du juge des tutelles."
+  },
+  {
+    question: "Quel document est obligatoire pour accepter une succession au nom d’un majeur protégé ?",
+    options: [
+      "Un certificat médical",
+      "Une autorisation du juge",
+      "Un acte de naissance",
+      "Un contrat de curatelle"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit obtenir l’autorisation du juge pour accepter une succession au nom du majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du notaire dans une succession ?",
+    options: [
+      "Organiser les soins médicaux",
+      "Gérer les comptes bancaires",
+      "Établir l’acte de notoriété et répartir les biens",
+      "Décider des héritiers"
+    ],
+    answer: [2],
+    explanation: "Le notaire établit l’acte de notoriété, identifie les héritiers et répartit les biens selon les règles de succession."
+  },
+  {
+    question: "Quel est le délai légal pour renoncer à une succession ?",
+    options: [
+      "1 mois",
+      "3 mois",
+      "6 mois",
+      "1 an"
+    ],
+    answer: [2],
+    explanation: "Le délai légal pour renoncer à une succession est de 6 mois à compter du décès."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un bien locatif ?",
+    options: [
+      "Signer seul le bail sans autorisation",
+      "Gérer les loyers et charges dans l’intérêt du majeur",
+      "Vendre le bien sans autorisation",
+      "Refuser tout locataire"
+    ],
+    answer: [1],
+    explanation: "Le MJPM peut gérer les loyers et charges, mais doit obtenir l’autorisation du juge pour les actes de disposition."
+  },
+  {
+    question: "Quel est le rôle du juge des tutelles dans une donation ?",
+    options: [
+      "Il rédige l’acte",
+      "Il autorise ou refuse la donation au nom du majeur protégé",
+      "Il reçoit les fonds",
+      "Il choisit le bénéficiaire"
+    ],
+    answer: [1],
+    explanation: "Le juge autorise ou refuse la donation selon l’intérêt du majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la déclaration d’impôts ?",
+    options: [
+      "Il est dispensé de cette obligation",
+      "Il doit établir et transmettre la déclaration pour le majeur protégé",
+      "Il doit demander au juge de la rédiger",
+      "Il doit la confier à un notaire"
+    ],
+    answer: [1],
+    explanation: "Le MJPM est responsable de la déclaration fiscale du majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du livret de famille dans la gestion patrimoniale ?",
+    options: [
+      "Il permet de prouver la propriété d’un bien",
+      "Il contient les informations fiscales",
+      "Il atteste des liens familiaux utiles en cas de succession",
+      "Il permet d’ouvrir un compte bancaire"
+    ],
+    answer: [2],
+    explanation: "Le livret de famille atteste des liens de parenté, utiles pour identifier les héritiers."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de vente immobilière ?",
+    options: [
+      "Il peut vendre sans autorisation",
+      "Il doit obtenir l’accord du notaire uniquement",
+      "Il doit solliciter l’autorisation du juge des tutelles",
+      "Il doit consulter le médecin traitant"
+    ],
+    answer: [2],
+    explanation: "La vente d’un bien immobilier par un MJPM nécessite l’autorisation du juge des tutelles."
+  },
+  {
+    question: "Quel est le rôle du compte de gestion annuel ?",
+    options: [
+      "Il permet de suivre les soins médicaux",
+      "Il retrace les opérations patrimoniales du MJPM",
+      "Il sert à établir la déclaration d’impôts",
+      "Il permet de demander une mesure de protection"
+    ],
+    answer: [1],
+    explanation: "Le compte de gestion annuel retrace toutes les opérations patrimoniales effectuées par le MJPM."
+  }
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un portefeuille d’actions ?",
+    options: [
+      "Investir librement sans autorisation",
+      "Demander l’avis du médecin traitant",
+      "Gérer les titres avec prudence et autorisation du juge si nécessaire",
+      "Vendre tout le portefeuille dès la mesure prononcée"
+    ],
+    answer: [2],
+    explanation: "Le MJPM doit gérer les placements financiers dans l’intérêt du majeur, avec autorisation du juge pour les actes de disposition."
+  },
+  {
+    question: "Quel est le rôle du juge des tutelles dans une renonciation à succession ?",
+    options: [
+      "Il rédige l’acte",
+      "Il autorise ou refuse la renonciation",
+      "Il choisit les héritiers",
+      "Il gère les biens du défunt"
+    ],
+    answer: [1],
+    explanation: "Le juge doit autoriser la renonciation à succession pour un majeur protégé, après évaluation de son intérêt."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un bien en indivision ?",
+    options: [
+      "Il peut vendre seul le bien",
+      "Il doit obtenir l’accord des autres indivisaires et du juge si nécessaire",
+      "Il peut exclure les autres indivisaires",
+      "Il doit transmettre le bien à la mairie"
+    ],
+    answer: [1],
+    explanation: "La gestion d’un bien en indivision nécessite l’accord des co-indivisaires et parfois du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de partage successoral ?",
+    options: [
+      "Il décide seul du partage",
+      "Il représente le majeur et veille à ses intérêts",
+      "Il choisit les héritiers",
+      "Il rédige les actes notariés"
+    ],
+    answer: [1],
+    explanation: "Le MJPM représente le majeur dans les opérations de partage et veille à la préservation de ses droits."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un contrat d’assurance-vie ?",
+    options: [
+      "Il peut le modifier librement",
+      "Il doit obtenir l’autorisation du juge pour tout rachat ou modification",
+      "Il doit le clôturer immédiatement",
+      "Il doit le transférer à la banque centrale"
+    ],
+    answer: [1],
+    explanation: "Toute opération sur un contrat d’assurance-vie nécessite l’autorisation du juge pour un majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un bien loué meublé ?",
+    options: [
+      "Il peut signer seul le bail",
+      "Il doit obtenir l’autorisation du juge pour conclure ou résilier le bail",
+      "Il doit vendre le bien",
+      "Il doit le transformer en logement social"
+    ],
+    answer: [1],
+    explanation: "La conclusion ou résiliation d’un bail meublé est un acte de disposition nécessitant l’autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un héritage comportant des dettes ?",
+    options: [
+      "Il doit accepter sans condition",
+      "Il doit refuser systématiquement",
+      "Il doit demander l’autorisation du juge et envisager l’acceptation à concurrence de l’actif net",
+      "Il doit transmettre l’héritage à la commune"
+    ],
+    answer: [2],
+    explanation: "Le MJPM peut demander l’autorisation du juge pour accepter à concurrence de l’actif net afin de protéger le majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un bien rural loué ?",
+    options: [
+      "Il peut le vendre sans autorisation",
+      "Il doit respecter le bail rural et obtenir l’autorisation du juge pour toute modification",
+      "Il doit le transformer en terrain constructible",
+      "Il doit le céder à la SAFER"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit respecter les règles spécifiques du bail rural et obtenir l’autorisation du juge pour les actes de disposition."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un bien en usufruit ?",
+    options: [
+      "Il peut le vendre librement",
+      "Il doit respecter les droits du nu-propriétaire et obtenir l’autorisation du juge pour toute aliénation",
+      "Il doit le transmettre à l’État",
+      "Il doit le transformer en bien indivis"
+    ],
+    answer: [1],
+    explanation: "L’usufruit implique des droits partagés avec le nu-propriétaire, et toute aliénation nécessite l’autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un bien reçu par donation ?",
+    options: [
+      "Il peut le vendre immédiatement",
+      "Il doit respecter les clauses de la donation et obtenir l’autorisation du juge pour tout acte de disposition",
+      "Il doit le transmettre à la famille",
+      "Il doit le transformer en bien public"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit respecter les clauses de la donation et obtenir l’autorisation du juge pour toute vente ou modification."
+  }
+];
+const patrimoineExpert = [
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec passif supérieur à l’actif ?"
+    options: [
+      "Accepter la succession sans condition",
+      "Refuser la succession sans autorisation",
+      "Demander l’autorisation du juge pour accepter à concurrence de l’actif net",
+      "Transmettre la succession à la commune"
+    ],
+    answer: [2],
+    explanation: "Le MJPM doit demander l’autorisation du juge pour accepter à concurrence de l’actif net afin de protéger le majeur."
+  },
+  {
+    question: "Quel est le rôle du notaire dans une indivision conflictuelle ?",
+    options: [
+      "Il peut imposer le partage",
+      "Il conseille et propose des solutions amiables ou judiciaires",
+      "Il désigne les héritiers",
+      "Il rédige les actes médicaux"
+    ],
+    answer: [1],
+    explanation: "Le notaire peut proposer des solutions amiables ou saisir le juge en cas de blocage dans l’indivision."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un usufruit successoral ?",
+    options: [
+      "Il peut vendre le bien librement",
+      "Il doit respecter les droits du nu-propriétaire et obtenir l’autorisation du juge",
+      "Il doit transformer le bien en indivision",
+      "Il doit transmettre le bien à l’État"
+    ],
+    answer: [1],
+    explanation: "L’usufruit implique des droits partagés, toute aliénation nécessite l’autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du juge des tutelles dans une donation-partage ?",
+    options: [
+      "Il rédige l’acte",
+      "Il autorise ou refuse la donation au nom du majeur protégé",
+      "Il choisit les bénéficiaires",
+      "Il gère les biens transmis"
+    ],
+    answer: [1],
+    explanation: "Le juge autorise ou refuse la donation-partage selon l’intérêt du majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un contrat de capitalisation ?",
+    options: [
+      "Il peut le modifier librement",
+      "Il doit obtenir l’autorisation du juge pour tout rachat ou arbitrage",
+      "Il doit le clôturer immédiatement",
+      "Il doit le transmettre à la banque centrale"
+    ],
+    answer: [1],
+    explanation: "Toute opération sur un contrat de capitalisation nécessite l’autorisation du juge pour un majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession internationale ?",
+    options: [
+      "Il applique le droit français sans exception",
+      "Il doit vérifier la loi applicable et solliciter le juge si nécessaire",
+      "Il transmet le dossier au consulat",
+      "Il refuse systématiquement la succession"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit vérifier la loi applicable et solliciter le juge pour protéger les intérêts du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de partage judiciaire ?",
+    options: [
+      "Il rédige les actes",
+      "Il représente le majeur et veille à ses intérêts",
+      "Il choisit les héritiers",
+      "Il organise les soins médicaux"
+    ],
+    answer: [1],
+    explanation: "Le MJPM représente le majeur dans les opérations de partage et veille à la préservation de ses droits."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un bien grevé d’hypothèque ?",
+    options: [
+      "Il peut le vendre librement",
+      "Il doit obtenir l’autorisation du juge et vérifier les conséquences financières",
+      "Il doit le transmettre à la commune",
+      "Il doit le transformer en bien public"
+    ],
+    answer: [1],
+    explanation: "La vente d’un bien grevé d’hypothèque nécessite l’autorisation du juge et une analyse des conséquences."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de liquidation de communauté ?",
+    options: [
+      "Il peut liquider seul",
+      "Il doit obtenir l’autorisation du juge et veiller à l’équité du partage",
+      "Il doit transmettre les biens à la famille",
+      "Il doit refuser toute négociation"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit obtenir l’autorisation du juge et veiller à la préservation des droits du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion d’un patrimoine professionnel ?",
+    options: [
+      "Il peut gérer librement l’entreprise",
+      "Il doit obtenir l’autorisation du juge pour tout acte de disposition",
+      "Il doit fermer l’entreprise",
+      "Il doit transmettre la gestion à la mairie"
+    ],
+    answer: [1],
+    explanation: "La gestion d’un patrimoine professionnel nécessite prudence et autorisation du juge pour les actes importants."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec testament ?",
+    options: [
+      "Il peut modifier le testament",
+      "Il doit respecter les volontés du défunt et obtenir l’autorisation du juge pour les actes",
+      "Il doit refuser la succession",
+      "Il doit transmettre le testament au juge"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit respecter les volontés du défunt et obtenir l’autorisation du juge pour les actes de disposition."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de tontine ?",
+    options: [
+      "Il peut annuler la clause",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute action",
+      "Il doit transmettre le bien à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de tontine implique des conséquences patrimoniales complexes, nécessitant l’autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec legs universel ?",
+    options: [
+      "Il doit refuser le legs",
+      "Il doit accepter sans autorisation",
+      "Il doit obtenir l’autorisation du juge pour accepter ou refuser",
+      "Il doit transmettre le legs à la commune"
+    ],
+    answer: [2],
+    explanation: "Le MJPM doit obtenir l’autorisation du juge pour accepter ou refuser un legs universel."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec réserve héréditaire ?",
+    options: [
+      "Il peut ignorer la réserve",
+      "Il doit veiller à ce que les droits du majeur soient respectés",
+      "Il doit transmettre les biens à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La réserve héréditaire protège certains héritiers, le MJPM doit veiller à son respect."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause d’inaliénabilité ?",
+    options: [
+      "Il peut vendre le bien librement",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute dérogation",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause d’inaliénabilité limite la vente, le MJPM doit respecter cette clause et solliciter le juge si besoin."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec usufruit temporaire ?",
+    options: [
+      "Il peut vendre le bien",
+      "Il doit respecter les droits du nu-propriétaire et obtenir l’autorisation du juge",
+      "Il doit transmettre le bien à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "L’usufruit temporaire implique des droits partagés, toute aliénation nécessite l’autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de préciput ?",
+    options: [
+      "Il doit refuser la clause",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour l’appliquer",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de préciput permet à un époux de prélever certains biens, le MJPM doit respecter cette clause."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de retour conventionnel ?",
+    options: [
+      "Il doit refuser la clause",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute action",
+      "Il doit transmettre le bien à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de retour conventionnel prévoit le retour d’un bien à la famille d’origine, le MJPM doit la respecter."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de retour légal ?",
+    options: [
+      "Il peut ignorer la clause",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute action",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de retour légal prévoit que certains biens reviennent à la famille d’origine ; le MJPM doit la respecter et solliciter le juge si nécessaire."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de réversion d’usufruit ?",
+    options: [
+      "Il peut vendre le bien librement",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute aliénation",
+      "Il doit transmettre le bien à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de réversion d’usufruit prévoit le retour de l’usufruit à une personne désignée ; le MJPM doit la respecter."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de substitution ?",
+    options: [
+      "Il peut modifier les bénéficiaires",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute action",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de substitution permet de désigner un bénéficiaire en remplacement ; le MJPM doit la respecter et solliciter le juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de réserve d’usufruit au profit du conjoint survivant ?",
+    options: [
+      "Il doit ignorer la clause",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute action",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La réserve d’usufruit au profit du conjoint survivant est une disposition à respecter ; le MJPM doit agir avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de partage anticipé ?",
+    options: [
+      "Il peut refuser le partage",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour l’appliquer",
+      "Il doit transmettre le bien à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "Le partage anticipé est une disposition à respecter ; le MJPM doit obtenir l’autorisation du juge pour l’appliquer."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause d’exclusion d’un héritier ?",
+    options: [
+      "Il peut réintégrer l’héritier",
+      "Il doit respecter la clause et vérifier sa validité avec le juge",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "L’exclusion d’un héritier est une clause sensible ; le MJPM doit la respecter et vérifier sa légalité avec le juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de legs particulier ?",
+    options: [
+      "Il peut modifier le bénéficiaire",
+      "Il doit respecter le legs et obtenir l’autorisation du juge pour l’exécuter",
+      "Il doit transmettre le bien à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "Le MJPM doit respecter les legs particuliers et obtenir l’autorisation du juge pour les exécuter."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de réserve d’usufruit sur un bien indivis ?",
+    options: [
+      "Il peut vendre le bien",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute action",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La réserve d’usufruit sur un bien indivis impose des contraintes ; le MJPM doit respecter la clause et solliciter le juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de préciput sur un bien immobilier ?",
+    options: [
+      "Il peut vendre le bien librement",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute aliénation",
+      "Il doit transmettre le bien à l’État",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de préciput permet à un époux de prélever certains biens ; le MJPM doit la respecter et agir avec autorisation."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une succession avec clause de retour conventionnel sur un bien donné ?",
+    options: [
+      "Il peut vendre le bien",
+      "Il doit respecter la clause et obtenir l’autorisation du juge pour toute action",
+      "Il doit transmettre le bien à la commune",
+      "Il doit refuser la succession"
+    ],
+    answer: [1],
+    explanation: "La clause de retour conventionnel prévoit le retour du bien à la famille d’origine ; le MJPM doit la respecter."
+  }
+];
+
+
 
 
 
