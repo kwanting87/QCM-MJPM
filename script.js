@@ -205,7 +205,7 @@ qcmData.santé.débutant = [
     answer: 2,
     explanation: "Santé publique France est l’agence nationale de prévention et d’éducation à la santé."
   }
-];
+],
 qcmData.santé.intermédiaire = [
   {
     question: "Quel est le rôle du Conseil National de l’Ordre des Médecins ?",
@@ -427,7 +427,7 @@ qcmData.santé.intermédiaire = [
     answer: 0,
     explanation: "Le médecin rédige les certificats médicaux nécessaires à la mise en œuvre des soins psychiatriques."
   }
-];
+],
 qcmData.santé.expérimenté = [
   {
     question: "Dans quel cas le MJPM peut accéder au dossier médical d’un majeur protégé ?",
@@ -648,7 +648,7 @@ qcmData.santé.expérimenté = [
     ],
     answer: 0,
     explanation: "Le MJPM doit saisir les autorités compétentes en cas de refus de soins injustifié."
-  };
+  },
 qcmData.patrimoine.débutant = [
   {
     question: "Qu’est-ce qu’un patrimoine ?",
@@ -870,7 +870,7 @@ qcmData.patrimoine.débutant = [
     answer: 2,
     explanation: "Le relevé de compte est un document bancaire qui détaille les opérations effectuées."
   }
-];
+],
 qcmData.patrimoine.intermédiaire = [
   {
     question: "Quel document le MJPM doit-il produire pour vendre un bien immobilier du majeur protégé ?",
@@ -1092,7 +1092,7 @@ qcmData.patrimoine.intermédiaire = [
     answer: 1,
     explanation: "Le MJPM peut faire appel à un notaire et saisir le juge en cas de succession complexe."
   }
-];
+],
 qcmData.patrimoine.expérimenté = [
   {
     question: "Que doit faire le MJPM avant de vendre un bien immobilier appartenant au majeur protégé ?",
@@ -1314,7 +1314,7 @@ qcmData.patrimoine.expérimenté = [
     answer: 0,
     explanation: "Le MJPM peut saisir le juge ou faire appel à un professionnel pour résoudre un litige fiscal complexe."
   }
-];
+],
 qcmData.famille.débutant = [
   {
     question: "Qu’est-ce qu’un livret de famille ?",
@@ -1536,7 +1536,7 @@ qcmData.famille.débutant = [
     answer: 0,
     explanation: "Un enfant naturel est un enfant né hors mariage, mais dont la filiation peut être établie."
   }
-];
+],
 qcmData.famille.intermédiaire = [
   {
     question: "Quel juge est compétent pour les conflits liés à la garde d’un enfant ?",
@@ -1758,7 +1758,7 @@ qcmData.famille.intermédiaire = [
     answer: 2,
     explanation: "Le juge peut modifier la mesure ou encadrer les actes pour protéger le majeur."
   }
-];
+],
 qcmData.famille.expérimenté = [
   {
     question: "Que doit faire le MJPM si un conflit familial nuit à la mesure de protection ?",
@@ -1980,7 +1980,7 @@ qcmData.famille.expérimenté = [
     answer: 1,
     explanation: "Le MJPM veille à préserver l’autonomie du majeur dans une situation de dépendance affective."
   }
-];
+],
 qcmData.procédures.débutant = [
   {
     question: "Qu’est-ce qu’un tribunal ?",
@@ -2202,7 +2202,7 @@ qcmData.procédures.débutant = [
     answer: 1,
     explanation: "Un jugement contradictoire est rendu après que les deux parties ont pu présenter leurs arguments."
   }
-];
+],
 qcmData.procédures.intermédiaire = [
   {
     question: "Quel est le rôle du juge des contentieux de la protection ?",
@@ -2424,7 +2424,7 @@ qcmData.procédures.intermédiaire = [
     answer: 1,
     explanation: "Le tribunal de proximité traite les litiges civils simples et de faible montant."
   }
-];
+],
 qcmData.procédures.expérimenté = [
   {
     question: "Que doit faire le MJPM en cas de contestation d’un acte de gestion par la famille ?",
@@ -2646,7 +2646,7 @@ qcmData.procédures.expérimenté = [
     answer: 1,
     explanation: "Le MJPM peut contester une habilitation familiale s’il estime qu’elle nuit au majeur."
   }
-];
+],
 qcmData.action.débutant = [
   {
     question: "Quel est le rôle principal du MJPM ?",
@@ -2868,7 +2868,7 @@ qcmData.action.débutant = [
     answer: 1,
     explanation: "Le MJPM veille au respect des droits et libertés du majeur protégé."
   }
-];
+],
 qcmData.action.intermédiaire = [
   {
     question: "Quel est le rôle du MJPM dans la gestion des actes de disposition ?",
@@ -3090,7 +3090,7 @@ qcmData.action.intermédiaire = [
     answer: 1,
     explanation: "Le MJPM agit pour rétablir les droits du majeur et peut saisir le juge si nécessaire."
   }
-];
+],
 qcmData.action.expérimenté = [
   {
     question: "Que doit faire le MJPM si le majeur protégé refuse une aide essentielle ?",
@@ -3313,6 +3313,7 @@ qcmData.action.expérimenté = [
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
   }
 ];
+
 
 
 
