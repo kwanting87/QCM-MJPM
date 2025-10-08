@@ -1,4 +1,5 @@
-// 1️⃣ Déclaration des données et variables globales
+console.log("✅ script.js bien chargé !");
+
 const qcmData = {
   santé: { débutant: [], intermédiaire: [], expérimenté: [] },
   patrimoine: { débutant: [], intermédiaire: [], expérimenté: [] },
@@ -11,7 +12,6 @@ let score = 0;
 let totalRéponses = 0;
 const questionsDéjàPosées = {};
 
-// 2️⃣ Fonction principale
 function loadQuestion() {
   const theme = document.getElementById("theme").value;
   const niveau = document.getElementById("niveau").value;
@@ -82,8 +82,6 @@ function loadQuestion() {
   block.appendChild(optionsList);
   qcmBox.appendChild(block);
 }
-
-// 3️⃣ Rendre la fonction accessible au HTML
 window.loadQuestion = loadQuestion;
 
 qcmData.santé.débutant = [
@@ -3315,6 +3313,7 @@ qcmData.action.expérimenté = [
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
   }
 ];
+
 
 
 
