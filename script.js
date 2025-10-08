@@ -1933,6 +1933,217 @@ qcmData.famille.intérmediaire
     explanation: "Le MJPM peut accompagner le majeur dans une demande de garde alternée, avec autorisation du juge."
   }
 );
+qcmData.famille.expert
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de retrait d’autorité parentale ?",
+    options: [
+      "Il décide seul du retrait",
+      "Il peut alerter les autorités et représenter le majeur avec autorisation du juge",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [1],
+    explanation: "Le MJPM peut alerter les autorités compétentes et représenter le majeur dans une procédure de retrait d’autorité parentale, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation de nationalité d’un enfant ?",
+    options: [
+      "Il peut engager la procédure avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut engager une procédure de contestation de nationalité au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de reconnaissance d’un enfant né d’une GPA à l’étranger ?",
+    options: [
+      "Il peut accompagner le majeur et solliciter l’autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut accompagner le majeur dans une procédure complexe de reconnaissance, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un testament familial ?",
+    options: [
+      "Il peut contester le testament avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester un testament au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de désaveu de paternité ?",
+    options: [
+      "Il peut engager la procédure avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut engager une procédure de désaveu de paternité au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de partage judiciaire entre héritiers en conflit ?",
+    options: [
+      "Il peut représenter le majeur et solliciter le juge pour préserver ses droits",
+      "Il décide seul du partage",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut représenter le majeur dans une procédure de partage judiciaire et solliciter le juge pour préserver ses droits."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un PACS posthume ?",
+    options: [
+      "Il peut contester le PACS avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester un PACS posthume au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de révocation d’un tuteur familial ?",
+    options: [
+      "Il peut demander la révocation avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut demander la révocation d’un tuteur familial s’il constate une atteinte aux intérêts du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation de filiation adoptive ?",
+    options: [
+      "Il peut engager la procédure avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut engager une procédure de contestation de filiation adoptive avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de reconnaissance d’un enfant issu d’un inceste ?",
+    options: [
+      "Il peut accompagner le majeur avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut accompagner le majeur dans une procédure de reconnaissance complexe, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un acte de naissance étranger ?",
+    options: [
+      "Il peut contester l’acte avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester un acte de naissance étranger au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de reconnaissance d’un enfant en situation irrégulière ?",
+    options: [
+      "Il peut accompagner le majeur avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut accompagner le majeur dans une procédure de reconnaissance, même en situation irrégulière, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un acte de donation familiale ?",
+    options: [
+      "Il peut contester l’acte avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester une donation familiale au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un testament olographe ?",
+    options: [
+      "Il peut contester le testament avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester un testament olographe au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de reconnaissance d’un enfant né sans filiation déclarée ?",
+    options: [
+      "Il peut accompagner le majeur avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut accompagner le majeur dans une procédure de reconnaissance, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un acte de succession familiale ?",
+    options: [
+      "Il peut contester l’acte avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester un acte de succession au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un acte de partage familial ?",
+    options: [
+      "Il peut contester le partage avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester un acte de partage familial au nom du majeur protégé, avec autorisation du juge."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un acte de donation déguisée ?",
+    options: [
+      "Il peut contester l’acte avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester une donation déguisée au nom du majeur protégé, avec autorisation du juge."
+  },
+ {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un acte de renonciation à succession ?",
+    options: [
+      "Il peut contester la renonciation avec autorisation du juge",
+      "Il décide seul",
+      "Il rédige les actes",
+      "Il organise les soins médicaux"
+    ],
+    answer: [0],
+    explanation: "Le MJPM peut contester une renonciation à succession au nom du majeur protégé, avec autorisation du juge, notamment si elle est contraire à ses intérêts."
+  }
+
 
 
 
