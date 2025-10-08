@@ -82,7 +82,8 @@ function loadQuestion() {
   block.appendChild(optionsList);
   qcmBox.appendChild(block);
 }
-window.loadQuestion = loadQuestion;
+
+window.loadQuiz = loadQuiz;
 
 qcmData.santé.débutant = [
   {
@@ -3313,6 +3314,7 @@ qcmData.action.expérimenté = [
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
   }
 ];
+
 
 
 
