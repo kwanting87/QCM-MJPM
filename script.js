@@ -73,6 +73,10 @@ function loadQuestion() {
   block.appendChild(optionsList);
   qcmBox.appendChild(block);
 }
+
+// ✅ Rendre la fonction accessible au HTML
+window.loadQuestion = loadQuestion;
+
 qcmData.santé.débutant = [
   {
     question: "Quel organisme délivre la Carte Vitale ?",
@@ -3302,5 +3306,6 @@ qcmData.action.expérimenté = [
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
   }
 ];
+
 
 
