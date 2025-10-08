@@ -3327,4 +3327,5 @@ function loadQuiz() {
 
 window.loadQuiz = loadQuiz;
 
+validateQCMStructure(qcmData);
 
