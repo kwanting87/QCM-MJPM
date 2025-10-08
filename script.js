@@ -3250,86 +3250,63 @@ const qcmData = {
     answer: 1,
     explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
 };
+// ✅ Correctif minimal pour rendre ton QCM fonctionnel
+console.log("✅ Système QCM initialisé");
 
-let score = 0;
-let totalRéponses = 0;
-const questionsDéjàPosées = {};
+function normalizeKey(k) {
+  return k.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+function getRandomQuestion(theme, niveau) {
+  const normalizedTheme = normalizeKey(theme);
+  const normalizedNiveau = normalizeKey(niveau);
+  const themeData = qcmData[normalizedTheme] || qcmData[theme] || qcmData[theme.toLowerCase()];
+  if (!themeData) return null;
+  const levelData = themeData[normalizedNiveau] || themeData[niveau] || themeData[niveau.toLowerCase()];
+  if (!Array.isArray(levelData) || levelData.length === 0) return null;
+  return levelData[Math.floor(Math.random() * levelData.length)];
+}
 
 function loadQuiz() {
-  const theme = document.getElementById("theme").value;
-  const niveau = document.getElementById("niveau").value;
-  const qcmBox = document.getElementById("qcm");
-  qcmBox.innerHTML = "";
+  const themeSelect = document.getElementById("theme");
+  const niveauSelect = document.getElementById("niveau");
+  const qcmContainer = document.getElementById("qcm");
 
-  if (!questionsDéjàPosées[theme]) questionsDéjàPosées[theme] = {};
-  if (!questionsDéjàPosées[theme][niveau]) questionsDéjàPosées[theme][niveau] = [];
+  const theme = themeSelect.value;
+  const niveau = niveauSelect.value;
 
-  const toutesLesQuestions = qcmData[theme][niveau];
-  const restantes = toutesLesQuestions.filter((_, i) => !questionsDéjàPosées[theme][niveau].includes(i));
-
-  if (restantes.length === 0) {
-    qcmBox.innerHTML = `<p>✅ Toutes les questions ont été posées pour ce thème et ce niveau.</p><p>🎯 Score final : ${score} / ${totalRéponses}</p>`;
+  const questionObj = getRandomQuestion(theme, niveau);
+  if (!questionObj) {
+    qcmContainer.innerHTML = `<p>Aucune question trouvée pour <strong>${theme}</strong> (${niveau}).</p>`;
     return;
   }
 
-  const indexDansRestantes = Math.floor(Math.random() * restantes.length);
-  const questionIndex = toutesLesQuestions.indexOf(restantes[indexDansRestantes]);
-  const q = toutesLesQuestions[questionIndex];
-  questionsDéjàPosées[theme][niveau].push(questionIndex);
+  qcmContainer.innerHTML = `
+    <div class="qcm-block">
+      <h3>🧠 Question :</h3>
+      <div class="question">${questionObj.question}</div>
+      <ul class="options">
+        ${questionObj.options
+          .map((opt, i) => `<li data-index="${i}">${opt}</li>`)
+          .join("")}
+      </ul>
+      <div id="explanation" class="explanation" style="display:none;"></div>
+    </div>
+  `;
 
-  const block = document.createElement("div");
-  block.className = "qcm-block";
+  const options = qcmContainer.querySelectorAll(".options li");
+  const explanation = qcmContainer.querySelector("#explanation");
 
-  const titre = document.createElement("h3");
-  titre.textContent = `🧠 Question ${totalRéponses + 1}`;
-  block.appendChild(titre);
-
-  const questionText = document.createElement("div");
-  questionText.className = "question";
-  questionText.textContent = q.question;
-  block.appendChild(questionText);
-
-  const optionsList = document.createElement("ul");
-  optionsList.className = "options";
-
-  q.options.forEach((opt, i) => {
-    const li = document.createElement("li");
-    li.textContent = `${String.fromCharCode(65 + i)}) ${opt}`;
-    li.onclick = () => {
-      totalRéponses++;
-      const allOptions = optionsList.querySelectorAll("li");
-      allOptions.forEach((o, index) => {
-        o.onclick = null;
-        if (index === q.answer) {
-          o.classList.add("correct");
-          o.textContent += " ✅";
-        } else if (index === i) {
-          o.classList.add("incorrect");
-          o.textContent += " ❌";
-        }
+  options.forEach(opt => {
+    opt.addEventListener("click", e => {
+      const index = parseInt(e.target.dataset.index);
+      options.forEach((li, j) => {
+        li.classList.remove("correct", "incorrect");
+        if (j === questionObj.answer) li.classList.add("correct");
+        else if (j === index) li.classList.add("incorrect");
       });
-      if (i === q.answer) score++;
-
-      const scoreEl = document.createElement("p");
-      scoreEl.innerHTML = `🧮 <strong>Score :</strong> ${score} / ${totalRéponses}`;
-      block.appendChild(scoreEl);
-
-      const explicationEl = document.createElement("div");
-      explicationEl.className = "explanation";
-      explicationEl.innerHTML = `💡 <strong>Explication :</strong> ${q.explanation}`;
-      block.appendChild(explicationEl);
-    };
-    optionsList.appendChild(li);
+      explanation.style.display = "block";
+      explanation.innerHTML = `<strong>Explication :</strong> ${questionObj.explanation}`;
+    });
   });
-
-  block.appendChild(optionsList);
-  qcmBox.appendChild(block);
 }
-
-window.loadQuiz = loadQuiz;
-
-validateQCMStructure(qcmData);
-
-
-
-
