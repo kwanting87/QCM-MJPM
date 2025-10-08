@@ -90,3 +90,28 @@ function loadQuestion() {
     qcmBox.appendChild(btn);
   });
 }
+qcmData.santé.débutant = [
+  {
+    question: "Quel est le rôle principal de l'ARS ?",
+    options: [
+      "Gérer les hôpitaux privés",
+      "Organiser les élections",
+      "Piloter la politique de santé publique régionale",
+      "Contrôler les pharmacies"
+    ],
+    answer: 2,
+    explanation: "L'ARS pilote la politique de santé publique dans sa région."
+  },
+  {
+    question: "Que signifie le sigle HAS ?",
+    options: [
+      "Haute Autorité de Santé",
+      "Hôpital d’Accueil Scolaire",
+      "Habilitation Administrative Spéciale",
+      "Hébergement Assisté Sanitaire"
+    ],
+    answer: 0,
+    explanation: "La HAS est la Haute Autorité de Santé, chargée d’évaluer les pratiques médicales."
+  },
+];
+
