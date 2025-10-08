@@ -1987,3 +1987,1336 @@ qcmData.famille.expérimenté = [
     explanation: "Le MJPM veille à préserver l’autonomie du majeur dans une situation de dépendance affective."
   }
 ];
+qcmData.procédures.débutant = [
+  {
+    question: "Qu’est-ce qu’un tribunal ?",
+    options: [
+      "Un hôpital",
+      "Un lieu où l’on vote",
+      "Un lieu où la justice est rendue",
+      "Un centre administratif"
+    ],
+    answer: 2,
+    explanation: "Le tribunal est l’institution où les juges rendent la justice."
+  },
+  {
+    question: "Qui rend les décisions de justice dans un tribunal ?",
+    options: [
+      "Le maire",
+      "Le juge",
+      "Le médecin",
+      "Le policier"
+    ],
+    answer: 1,
+    explanation: "Le juge est le professionnel chargé de rendre les décisions de justice."
+  },
+  {
+    question: "Qu’est-ce qu’un greffier ?",
+    options: [
+      "Un avocat",
+      "Un agent d’accueil",
+      "Un professionnel qui assiste le juge et rédige les actes",
+      "Un policier"
+    ],
+    answer: 2,
+    explanation: "Le greffier assiste le juge et assure la rédaction des actes de procédure."
+  },
+  {
+    question: "Qu’est-ce qu’un avocat ?",
+    options: [
+      "Un professionnel de santé",
+      "Un professionnel qui défend les intérêts d’une personne en justice",
+      "Un agent administratif",
+      "Un juge"
+    ],
+    answer: 1,
+    explanation: "L’avocat conseille et défend les personnes devant les juridictions."
+  },
+  {
+    question: "Qu’est-ce qu’une audience ?",
+    options: [
+      "Une réunion familiale",
+      "Un rendez-vous médical",
+      "Une séance où le juge entend les parties",
+      "Un entretien d’embauche"
+    ],
+    answer: 2,
+    explanation: "L’audience est le moment où le juge entend les parties et examine l’affaire."
+  },
+  {
+    question: "Qu’est-ce qu’un jugement ?",
+    options: [
+      "Un avis médical",
+      "Une décision rendue par un juge",
+      "Un contrat de travail",
+      "Un acte de naissance"
+    ],
+    answer: 1,
+    explanation: "Le jugement est la décision rendue par le juge à l’issue d’une procédure."
+  },
+  {
+    question: "Qu’est-ce qu’un recours ?",
+    options: [
+      "Une demande de soins",
+      "Une demande d’aide sociale",
+      "Une contestation d’une décision de justice",
+      "Une demande de logement"
+    ],
+    answer: 2,
+    explanation: "Le recours permet de contester une décision devant une juridiction supérieure."
+  },
+  {
+    question: "Qu’est-ce qu’un dossier judiciaire ?",
+    options: [
+      "Un dossier médical",
+      "Un ensemble de documents relatifs à une affaire",
+      "Un contrat de travail",
+      "Un acte de naissance"
+    ],
+    answer: 1,
+    explanation: "Le dossier judiciaire regroupe tous les documents utiles à l’instruction d’une affaire."
+  },
+  {
+    question: "Qu’est-ce qu’un juge des contentieux de la protection ?",
+    options: [
+      "Un juge pénal",
+      "Un juge chargé des mesures de protection des majeurs",
+      "Un juge administratif",
+      "Un juge fiscal"
+    ],
+    answer: 1,
+    explanation: "Ce juge est compétent pour les mesures de protection juridique des majeurs."
+  },
+  {
+    question: "Qu’est-ce qu’une convocation ?",
+    options: [
+      "Un contrat de travail",
+      "Un document invitant à se présenter devant une autorité",
+      "Un acte de naissance",
+      "Un certificat médical"
+    ],
+    answer: 1,
+    explanation: "La convocation est un document officiel invitant une personne à se présenter devant une autorité."
+  },
+  {
+    question: "Qu’est-ce qu’un tribunal judiciaire ?",
+    options: [
+      "Un tribunal militaire",
+      "Un tribunal compétent pour les litiges civils et familiaux",
+      "Un tribunal administratif",
+      "Un tribunal de commerce"
+    ],
+    answer: 1,
+    explanation: "Le tribunal judiciaire traite les litiges civils, familiaux et les mesures de protection."
+  },
+  {
+    question: "Qu’est-ce qu’un acte de procédure ?",
+    options: [
+      "Un acte médical",
+      "Un document officiel dans une affaire judiciaire",
+      "Un contrat de travail",
+      "Un acte de naissance"
+    ],
+    answer: 1,
+    explanation: "Un acte de procédure est un document officiel utilisé dans le cadre d’une affaire judiciaire."
+  },
+  {
+    question: "Qu’est-ce qu’un délai de recours ?",
+    options: [
+      "Le temps pour obtenir un logement",
+      "Le temps pour contester une décision de justice",
+      "Le temps pour recevoir un jugement",
+      "Le temps pour organiser une audience"
+    ],
+    answer: 1,
+    explanation: "Le délai de recours est le temps légal pour contester une décision."
+  },
+  {
+    question: "Qu’est-ce qu’un huissier de justice ?",
+    options: [
+      "Un juge",
+      "Un avocat",
+      "Un professionnel chargé de signifier les actes et exécuter les décisions",
+      "Un greffier"
+    ],
+    answer: 2,
+    explanation: "L’huissier signifie les actes et met en œuvre les décisions de justice."
+  },
+  {
+    question: "Qu’est-ce qu’un référé ?",
+    options: [
+      "Une procédure rapide en cas d’urgence",
+      "Un contrat de travail",
+      "Un acte de naissance",
+      "Un jugement définitif"
+    ],
+    answer: 0,
+    explanation: "Le référé est une procédure rapide pour obtenir une décision provisoire en urgence."
+  },
+  {
+    question: "Qu’est-ce qu’un appel ?",
+    options: [
+      "Une demande de logement",
+      "Une demande d’aide sociale",
+      "Une contestation d’un jugement devant une juridiction supérieure",
+      "Une convocation"
+    ],
+    answer: 2,
+    explanation: "L’appel permet de contester un jugement devant une juridiction supérieure."
+  },
+  {
+    question: "Qu’est-ce qu’un avocat commis d’office ?",
+    options: [
+      "Un avocat choisi par la famille",
+      "Un avocat désigné par le juge pour une personne sans défense",
+      "Un avocat spécialisé en fiscalité",
+      "Un avocat militaire"
+    ],
+    answer: 1,
+    explanation: "L’avocat commis d’office est désigné pour défendre une personne qui n’en a pas."
+  },
+  {
+    question: "Qu’est-ce qu’un jugement exécutoire ?",
+    options: [
+      "Un jugement qui peut être mis en œuvre",
+      "Un jugement provisoire",
+      "Un jugement contesté",
+      "Un jugement médical"
+    ],
+    answer: 0,
+    explanation: "Un jugement exécutoire peut être mis en œuvre par voie d’huissier ou autre."
+  },
+  {
+    question: "Qu’est-ce qu’un tribunal administratif ?",
+    options: [
+      "Un tribunal qui juge les litiges entre particuliers",
+      "Un tribunal qui juge les litiges avec l’administration",
+      "Un tribunal pénal",
+      "Un tribunal militaire"
+    ],
+    answer: 1,
+    explanation: "Le tribunal administratif est compétent pour les litiges entre citoyens et administration."
+  },
+  {
+    question: "Qu’est-ce qu’un jugement contradictoire ?",
+    options: [
+      "Un jugement rendu sans audience",
+      "Un jugement rendu après que les deux parties ont été entendues",
+      "Un jugement rendu par un huissier",
+      "Un jugement rendu par un avocat"
+    ],
+    answer: 1,
+    explanation: "Un jugement contradictoire est rendu après que les deux parties ont pu présenter leurs arguments."
+  }
+];
+qcmData.procédures.intermédiaire = [
+  {
+    question: "Quel est le rôle du juge des contentieux de la protection ?",
+    options: [
+      "Il juge les affaires pénales",
+      "Il statue sur les mesures de protection des majeurs",
+      "Il organise les soins médicaux",
+      "Il rédige les actes notariés"
+    ],
+    answer: 1,
+    explanation: "Le juge des contentieux de la protection est compétent pour les mesures de protection juridique."
+  },
+  {
+    question: "Quel document est nécessaire pour demander une mesure de protection ?",
+    options: [
+      "Un acte de naissance",
+      "Un certificat médical circonstancié",
+      "Un contrat de travail",
+      "Un jugement antérieur"
+    ],
+    answer: 1,
+    explanation: "Le certificat médical circonstancié est obligatoire pour saisir le juge en vue d’une mesure de protection."
+  },
+  {
+    question: "Quel est le rôle du greffier dans une procédure judiciaire ?",
+    options: [
+      "Il défend les parties",
+      "Il rend les décisions",
+      "Il assiste le juge et rédige les actes",
+      "Il organise les soins"
+    ],
+    answer: 2,
+    explanation: "Le greffier assiste le juge et assure la rédaction et la conservation des actes de procédure."
+  },
+  {
+    question: "Qu’est-ce qu’un jugement en dernier ressort ?",
+    options: [
+      "Un jugement provisoire",
+      "Un jugement qui ne peut pas être contesté par appel",
+      "Un jugement médical",
+      "Un jugement contradictoire"
+    ],
+    answer: 1,
+    explanation: "Un jugement en dernier ressort ne peut pas faire l’objet d’un appel."
+  },
+  {
+    question: "Quel est le rôle de l’avocat dans une procédure civile ?",
+    options: [
+      "Il rend les décisions",
+      "Il assiste et représente les parties",
+      "Il rédige les jugements",
+      "Il organise les soins"
+    ],
+    answer: 1,
+    explanation: "L’avocat conseille, assiste et représente les parties devant les juridictions civiles."
+  },
+  {
+    question: "Qu’est-ce qu’un appel ?",
+    options: [
+      "Une demande de logement",
+      "Une contestation d’un jugement devant une juridiction supérieure",
+      "Une convocation",
+      "Un acte médical"
+    ],
+    answer: 1,
+    explanation: "L’appel permet de contester un jugement devant une juridiction supérieure."
+  },
+  {
+    question: "Quel est le délai pour faire appel d’un jugement civil ?",
+    options: [
+      "8 jours",
+      "1 mois",
+      "3 mois",
+      "1 semaine"
+    ],
+    answer: 1,
+    explanation: "Le délai d’appel en matière civile est généralement d’un mois à compter de la notification du jugement."
+  },
+  {
+    question: "Qu’est-ce qu’un référé ?",
+    options: [
+      "Une procédure rapide en cas d’urgence",
+      "Un jugement définitif",
+      "Un acte médical",
+      "Un contrat de travail"
+    ],
+    answer: 0,
+    explanation: "Le référé est une procédure rapide permettant d’obtenir une décision provisoire en urgence."
+  },
+  {
+    question: "Qu’est-ce qu’une requête ?",
+    options: [
+      "Une demande adressée au juge sans audience",
+      "Un acte médical",
+      "Un contrat de travail",
+      "Une convocation"
+    ],
+    answer: 0,
+    explanation: "La requête est une demande écrite adressée au juge, souvent sans audience."
+  },
+  {
+    question: "Qu’est-ce qu’un jugement contradictoire ?",
+    options: [
+      "Un jugement rendu sans audience",
+      "Un jugement rendu après que les deux parties ont été entendues",
+      "Un jugement médical",
+      "Un jugement administratif"
+    ],
+    answer: 1,
+    explanation: "Un jugement contradictoire est rendu après que les deux parties ont pu présenter leurs arguments."
+  },
+  {
+    question: "Qu’est-ce qu’un jugement par défaut ?",
+    options: [
+      "Un jugement rendu en l’absence d’une des parties",
+      "Un jugement médical",
+      "Un jugement administratif",
+      "Un jugement fiscal"
+    ],
+    answer: 0,
+    explanation: "Un jugement par défaut est rendu lorsque l’une des parties ne comparaît pas."
+  },
+  {
+    question: "Qu’est-ce qu’une notification de jugement ?",
+    options: [
+      "Un acte médical",
+      "Un document informant les parties de la décision rendue",
+      "Un contrat de travail",
+      "Un acte de naissance"
+    ],
+    answer: 1,
+    explanation: "La notification informe officiellement les parties du contenu du jugement."
+  },
+  {
+    question: "Qu’est-ce qu’une exécution provisoire ?",
+    options: [
+      "Une décision qui peut être mise en œuvre immédiatement",
+      "Un jugement définitif",
+      "Un acte médical",
+      "Un contrat de travail"
+    ],
+    answer: 0,
+    explanation: "L’exécution provisoire permet de mettre en œuvre une décision avant qu’elle ne soit définitive."
+  },
+  {
+    question: "Quel est le rôle de l’huissier dans l’exécution d’un jugement ?",
+    options: [
+      "Il rédige les jugements",
+      "Il signifie les actes et met en œuvre les décisions",
+      "Il défend les parties",
+      "Il organise les soins"
+    ],
+    answer: 1,
+    explanation: "L’huissier signifie les actes et met en œuvre les décisions de justice."
+  },
+  {
+    question: "Qu’est-ce qu’un recours gracieux ?",
+    options: [
+      "Un recours devant une juridiction supérieure",
+      "Une demande adressée à l’autorité qui a pris la décision",
+      "Un acte médical",
+      "Un contrat de travail"
+    ],
+    answer: 1,
+    explanation: "Le recours gracieux est une demande de réexamen adressée à l’auteur de la décision."
+  },
+  {
+    question: "Qu’est-ce qu’un recours hiérarchique ?",
+    options: [
+      "Un recours devant une juridiction pénale",
+      "Un recours devant l’autorité supérieure de celle qui a pris la décision",
+      "Un acte médical",
+      "Un contrat de travail"
+    ],
+    answer: 1,
+    explanation: "Le recours hiérarchique est adressé à l’autorité supérieure de celle qui a pris la décision contestée."
+  },
+  {
+    question: "Qu’est-ce qu’une assignation ?",
+    options: [
+      "Un acte médical",
+      "Un acte par lequel une personne est appelée à comparaître devant le juge",
+      "Un contrat de travail",
+      "Un acte de naissance"
+    ],
+    answer: 1,
+    explanation: "L’assignation est un acte par lequel une personne est appelée à comparaître devant le juge."
+  },
+  {
+    question: "Qu’est-ce qu’un jugement définitif ?",
+    options: [
+      "Un jugement qui peut être contesté",
+      "Un jugement qui ne peut plus faire l’objet de recours",
+      "Un jugement médical",
+      "Un jugement provisoire"
+    ],
+    answer: 1,
+    explanation: "Un jugement définitif ne peut plus être contesté par voie de recours."
+  },
+  {
+    question: "Qu’est-ce qu’un délai de prescription ?",
+    options: [
+      "Le temps pour organiser une audience",
+      "Le temps au-delà duquel une action en justice n’est plus possible",
+      "Le temps pour recevoir un jugement",
+      "Le temps pour contester une décision"
+    ],
+    answer: 1,
+    explanation: "Le délai de prescription est le temps au-delà duquel une action en justice n’est plus recevable."
+  },
+  {
+    question: "Qu’est-ce qu’un tribunal de proximité ?",
+    options: [
+      "Un tribunal militaire",
+      "Un tribunal compétent pour les litiges civils simples",
+      "Un tribunal administratif",
+      "Un tribunal pénal"
+    ],
+    answer: 1,
+    explanation: "Le tribunal de proximité traite les litiges civils simples et de faible montant."
+  }
+];
+qcmData.procédures.expérimenté = [
+  {
+    question: "Que doit faire le MJPM en cas de contestation d’un acte de gestion par la famille ?",
+    options: [
+      "Modifier la mesure",
+      "Saisir le juge des contentieux de la protection",
+      "Ignorer la contestation",
+      "Organiser une médiation"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit saisir le juge pour arbitrer toute contestation portant sur ses actes de gestion."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de mainlevée d’une mesure de protection ?",
+    options: [
+      "Il rédige le jugement",
+      "Il peut transmettre les éléments au juge si le majeur retrouve ses capacités",
+      "Il décide seul de la levée",
+      "Il organise les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut alerter le juge si la mesure devient injustifiée."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de refus de transmission de dossier par un professionnel ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou l’ordre professionnel",
+      "Organiser les soins",
+      "Modifier la mesure"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge ou l’ordre concerné pour obtenir les documents nécessaires."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure d’appel ?",
+    options: [
+      "Il rédige le jugement",
+      "Il peut accompagner le majeur dans la rédaction et le dépôt de l’appel",
+      "Il décide seul",
+      "Il organise les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut accompagner le majeur dans l’exercice de ses voies de recours."
+  },
+  {
+    question: "Que doit faire le MJPM si un jugement est rendu sans sa présence ?",
+    options: [
+      "Demander l’annulation automatique",
+      "Saisir le juge pour contester ou demander un réexamen",
+      "Ignorer la décision",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut contester ou demander un réexamen si la décision impacte la mesure."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation de curatelle renforcée ?",
+    options: [
+      "Il organise les soins",
+      "Il peut saisir le juge pour réévaluer la mesure",
+      "Il rédige les actes médicaux",
+      "Il décide seul"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut demander au juge de réévaluer la mesure si elle devient inadaptée."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de conflit entre deux juridictions ?",
+    options: [
+      "Saisir le juge des contentieux de la protection pour arbitrage",
+      "Organiser les soins",
+      "Ignorer le conflit",
+      "Modifier la mesure"
+    ],
+    answer: 0,
+    explanation: "Le MJPM peut saisir le juge compétent pour arbitrer un conflit de compétence."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de désignation d’un nouveau tuteur ?",
+    options: [
+      "Il décide seul",
+      "Il peut proposer un changement au juge",
+      "Il rédige les actes",
+      "Il organise les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut proposer au juge un changement de tuteur en cas de difficulté."
+  },
+  {
+    question: "Que doit faire le MJPM si une décision judiciaire est contraire à l’intérêt du majeur ?",
+    options: [
+      "Ignorer la décision",
+      "Saisir le juge ou faire appel",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut contester la décision ou faire appel si elle nuit au majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’habilitation familiale ?",
+    options: [
+      "Il organise les soins",
+      "Il peut saisir le juge pour réévaluer la mesure",
+      "Il rédige les actes médicaux",
+      "Il décide seul"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut contester une habilitation familiale s’il estime qu’elle nuit au majeur."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de non-respect d’un jugement par un tiers ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou l’huissier pour exécution",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge ou l’huissier pour faire exécuter le jugement."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation de comptes de gestion ?",
+    options: [
+      "Il décide seul",
+      "Il peut répondre aux observations du juge ou du greffier",
+      "Il organise les soins",
+      "Il rédige les actes médicaux"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut répondre aux observations du juge ou du greffier sur les comptes."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de refus d’audition du majeur par le juge ?",
+    options: [
+      "Ignorer la situation",
+      "Demander une audience ou un recours",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut demander une audience ou un recours si le majeur n’a pas été entendu."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de désignation d’un subrogé tuteur ?",
+    options: [
+      "Il organise les soins",
+      "Il peut proposer un nom au juge",
+      "Il rédige les actes médicaux",
+      "Il décide seul"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut proposer un subrogé tuteur en cas de conflit d’intérêt."
+  },
+  {
+    question: "Que doit faire le MJPM si une décision judiciaire est mal appliquée ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou demander l’exécution forcée",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut demander l’exécution forcée ou saisir le juge en cas de mauvaise application."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’un acte notarié ?",
+    options: [
+      "Il organise les soins",
+      "Il peut saisir le juge ou demander une vérification",
+      "Il rédige les actes médicaux",
+      "Il décide seul"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut contester un acte notarié s’il estime qu’il porte atteinte aux droits du majeur."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de refus d’accès au dossier judiciaire ?",
+    options: [
+      "Ignorer la situation",
+      "Demander l’accès au juge ou au greffe",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut demander l’accès au dossier auprès du juge ou du greffe."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’une mesure de sauvegarde ?",
+    options: [
+      "Il organise les soins",
+      "Il peut demander une mesure plus adaptée",
+      "Il rédige les actes médicaux",
+      "Il décide seul"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut demander une mesure plus adaptée si la sauvegarde est insuffisante."
+  },
+  {
+    question: "Que doit faire le MJPM si une décision judiciaire est contraire à l’avis médical ?",
+    options: [
+      "Ignorer l’avis médical",
+      "Saisir le juge avec un nouveau certificat",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge avec un nouveau certificat pour réévaluer la décision."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une procédure de contestation d’une mesure d’habilitation familiale ?",
+    options: [
+      "Il organise les soins",
+      "Il peut saisir le juge pour réévaluer ou annuler la mesure",
+      "Il rédige les actes médicaux",
+      "Il décide seul"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut contester une habilitation familiale s’il estime qu’elle nuit au majeur."
+  }
+];
+qcmData.action.débutant = [
+  {
+    question: "Quel est le rôle principal du MJPM ?",
+    options: [
+      "Soigner les majeurs protégés",
+      "Gérer les hôpitaux",
+      "Protéger les intérêts des majeurs sous mesure",
+      "Organiser les élections"
+    ],
+    answer: 2,
+    explanation: "Le MJPM protège les intérêts des majeurs sous mesure de protection juridique."
+  },
+  {
+    question: "Que signifie MJPM ?",
+    options: [
+      "Mandataire Judiciaire à la Protection des Majeurs",
+      "Médecin Juridique pour Personnes Malades",
+      "Magistrat de Justice pour Personnes Majeures",
+      "Mandat Juridique pour Personnes Mineures"
+    ],
+    answer: 0,
+    explanation: "MJPM signifie Mandataire Judiciaire à la Protection des Majeurs."
+  },
+  {
+    question: "Quel document autorise le MJPM à intervenir ?",
+    options: [
+      "Un contrat de travail",
+      "Un jugement du juge des contentieux de la protection",
+      "Un certificat médical",
+      "Une carte Vitale"
+    ],
+    answer: 1,
+    explanation: "Le MJPM agit sur la base d’un jugement rendu par le juge des contentieux de la protection."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la vie quotidienne du majeur ?",
+    options: [
+      "Décider des soins médicaux",
+      "Organiser les loisirs",
+      "Assurer la gestion administrative et financière",
+      "Rédiger les ordonnances"
+    ],
+    answer: 2,
+    explanation: "Le MJPM assure la gestion administrative et financière du majeur protégé."
+  },
+  {
+    question: "Quel type de mesure peut être confiée au MJPM ?",
+    options: [
+      "Tutelle, curatelle, sauvegarde de justice",
+      "Contrat de travail",
+      "Acte médical",
+      "Mandat fiscal"
+    ],
+    answer: 0,
+    explanation: "Le MJPM peut exercer une tutelle, une curatelle ou une sauvegarde de justice."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une curatelle simple ?",
+    options: [
+      "Décider seul",
+      "Assister le majeur dans certains actes",
+      "Organiser les soins",
+      "Rédiger les jugements"
+    ],
+    answer: 1,
+    explanation: "En curatelle simple, le MJPM assiste le majeur dans les actes importants."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une tutelle ?",
+    options: [
+      "Il assiste le majeur",
+      "Il organise les soins",
+      "Il représente le majeur dans les actes civils",
+      "Il rédige les ordonnances"
+    ],
+    answer: 2,
+    explanation: "En tutelle, le MJPM représente le majeur dans les actes civils."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une sauvegarde de justice ?",
+    options: [
+      "Il organise les soins",
+      "Il intervient ponctuellement pour protéger les intérêts",
+      "Il rédige les jugements",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "En sauvegarde de justice, le MJPM intervient ponctuellement pour protéger les intérêts du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion du budget ?",
+    options: [
+      "Il rédige les lois fiscales",
+      "Il peut établir un budget adapté aux besoins du majeur",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM établit un budget adapté aux besoins et ressources du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des aides sociales ?",
+    options: [
+      "Il rédige les ordonnances",
+      "Il peut effectuer les démarches administratives",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut effectuer les démarches pour obtenir les aides sociales du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la relation avec les établissements ?",
+    options: [
+      "Il organise les soins",
+      "Il peut échanger avec les professionnels pour défendre les intérêts du majeur",
+      "Il rédige les actes médicaux",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM échange avec les établissements pour défendre les intérêts du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion du logement ?",
+    options: [
+      "Il organise les soins",
+      "Il peut signer un bail ou résilier avec autorisation",
+      "Il rédige les actes médicaux",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut gérer le logement du majeur dans le cadre de sa mission."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des comptes bancaires ?",
+    options: [
+      "Il rédige les contrats",
+      "Il peut gérer les comptes avec autorisation du juge",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut gérer les comptes bancaires du majeur selon le cadre légal."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la vie sociale du majeur ?",
+    options: [
+      "Il organise les soins",
+      "Il favorise le maintien du lien social",
+      "Il rédige les actes médicaux",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM veille à préserver le lien social du majeur protégé."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des dettes ?",
+    options: [
+      "Il rédige les lois fiscales",
+      "Il peut négocier et régler les dettes",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut négocier et régler les dettes du majeur dans le cadre de sa mission."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la déclaration fiscale ?",
+    options: [
+      "Il rédige les lois",
+      "Il peut établir et transmettre la déclaration",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut établir et transmettre la déclaration fiscale du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des prestations sociales ?",
+    options: [
+      "Il rédige les ordonnances",
+      "Il peut effectuer les démarches pour obtenir les aides",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut effectuer les démarches pour obtenir les prestations sociales du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la relation avec la famille ?",
+    options: [
+      "Il organise les soins",
+      "Il peut dialoguer avec la famille dans l’intérêt du majeur",
+      "Il rédige les actes médicaux",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut dialoguer avec la famille pour préserver l’intérêt du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des documents administratifs ?",
+    options: [
+      "Il rédige les lois",
+      "Il peut classer, conserver et transmettre les documents utiles",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM gère les documents administratifs du majeur dans le cadre de sa mission."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la protection juridique ?",
+    options: [
+      "Il organise les soins",
+      "Il veille au respect des droits et libertés du majeur",
+      "Il rédige les actes médicaux",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM veille au respect des droits et libertés du majeur protégé."
+  }
+];
+qcmData.action.intermédiaire = [
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des actes de disposition ?",
+    options: [
+      "Il les réalise librement",
+      "Il les réalise avec autorisation du juge",
+      "Il les délègue à la famille",
+      "Il les refuse systématiquement"
+    ],
+    answer: 1,
+    explanation: "Les actes de disposition (vente, donation...) nécessitent l’autorisation du juge."
+  },
+  {
+    question: "Que doit faire le MJPM avant de signer un bail pour le majeur protégé ?",
+    options: [
+      "Rien, il est libre",
+      "Obtenir l’autorisation du juge si le bail engage fortement le patrimoine",
+      "Demander l’avis du médecin",
+      "Organiser une médiation"
+    ],
+    answer: 1,
+    explanation: "Certains baux nécessitent l’autorisation du juge selon leur impact patrimonial."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des prestations sociales ?",
+    options: [
+      "Il les perçoit pour lui-même",
+      "Il peut les demander et les gérer pour le majeur",
+      "Il les refuse",
+      "Il les délègue au médecin"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut effectuer les démarches pour obtenir et gérer les prestations sociales du majeur."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de refus de soins par le majeur ?",
+    options: [
+      "Imposer les soins",
+      "Respecter le refus et alerter le juge si nécessaire",
+      "Organiser les soins",
+      "Modifier la mesure"
+    ],
+    answer: 1,
+    explanation: "Le MJPM respecte la volonté du majeur mais peut alerter le juge en cas de danger."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des comptes bancaires ?",
+    options: [
+      "Il peut ouvrir, clôturer et gérer les comptes avec autorisation",
+      "Il rédige les contrats",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 0,
+    explanation: "Le MJPM peut gérer les comptes bancaires dans le cadre de sa mission."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de litige avec un organisme ?",
+    options: [
+      "Ignorer le litige",
+      "Saisir le juge ou engager un recours",
+      "Organiser les soins",
+      "Modifier la mesure"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut engager un recours ou saisir le juge pour défendre les droits du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion du logement ?",
+    options: [
+      "Il peut signer ou résilier un bail avec autorisation",
+      "Il rédige les actes médicaux",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 0,
+    explanation: "Le MJPM peut gérer le logement du majeur dans le cadre de sa mission."
+  },
+  {
+    question: "Que doit faire le MJPM pour établir un budget ?",
+    options: [
+      "Rien, ce n’est pas son rôle",
+      "Évaluer les ressources et les besoins du majeur",
+      "Organiser les soins",
+      "Demander l’avis du médecin"
+    ],
+    answer: 1,
+    explanation: "Le MJPM établit un budget adapté aux ressources et aux besoins du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la déclaration fiscale ?",
+    options: [
+      "Il rédige les lois",
+      "Il peut établir et transmettre la déclaration",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut établir et transmettre la déclaration fiscale du majeur."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de rupture de droits sociaux ?",
+    options: [
+      "Ignorer la situation",
+      "Effectuer les démarches pour rétablir les droits",
+      "Organiser les soins",
+      "Modifier la mesure"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit agir pour rétablir les droits sociaux du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des dettes ?",
+    options: [
+      "Il les ignore",
+      "Il peut les contester ou les régler dans le cadre de sa mission",
+      "Il les délègue au juge",
+      "Il les transmet au médecin"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut contester ou régler les dettes du majeur protégé."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de refus d’accès à un service ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou engager un recours",
+      "Organiser les soins",
+      "Modifier la mesure"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut engager un recours ou saisir le juge pour garantir l’accès aux droits."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la relation avec les établissements ?",
+    options: [
+      "Il organise les soins",
+      "Il peut échanger avec les professionnels pour défendre les intérêts du majeur",
+      "Il rédige les actes médicaux",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM échange avec les établissements pour défendre les intérêts du majeur."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de changement de situation du majeur ?",
+    options: [
+      "Ignorer le changement",
+      "Adapter sa gestion et informer le juge si nécessaire",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM adapte sa gestion et peut informer le juge si la situation évolue."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des aides au logement ?",
+    options: [
+      "Il rédige les lois",
+      "Il peut effectuer les démarches pour obtenir les aides",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut effectuer les démarches pour obtenir les aides au logement."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de refus de soins injustifié ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou le procureur",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge ou le procureur en cas de refus de soins injustifié."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des relations familiales ?",
+    options: [
+      "Il organise les soins",
+      "Il peut favoriser le lien familial dans l’intérêt du majeur",
+      "Il rédige les actes médicaux",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut favoriser le lien familial si cela est dans l’intérêt du majeur."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de conflit avec un professionnel ?",
+    options: [
+      "Ignorer le conflit",
+      "Saisir le juge ou engager une médiation",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge ou engager une médiation en cas de conflit."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans la gestion des démarches administratives ?",
+    options: [
+      "Il rédige les lois",
+      "Il peut effectuer les démarches pour le majeur",
+      "Il organise les soins",
+      "Il décide des traitements"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut effectuer les démarches administratives dans le cadre de sa mission."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de difficulté d’accès aux droits ?",
+    options: [
+      "Ignorer la situation",
+      "Agir pour rétablir les droits et saisir le juge si nécessaire",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM agit pour rétablir les droits du majeur et peut saisir le juge si nécessaire."
+  }
+];
+qcmData.action.expérimenté = [
+  {
+    question: "Que doit faire le MJPM si le majeur protégé refuse une aide essentielle ?",
+    options: [
+      "Respecter le refus sans condition",
+      "Imposer l’aide",
+      "Évaluer la capacité de discernement et saisir le juge si nécessaire",
+      "Ignorer la situation"
+    ],
+    answer: 2,
+    explanation: "Le MJPM doit évaluer la capacité du majeur et saisir le juge si le refus met en péril ses droits."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de rupture de droits sociaux ?",
+    options: [
+      "Ignorer la situation",
+      "Agir immédiatement pour rétablir les droits et alerter les partenaires",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit réagir rapidement pour rétablir les droits sociaux et mobiliser les partenaires."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de conflit avec un établissement ?",
+    options: [
+      "Ignorer le conflit",
+      "Saisir le juge ou engager une médiation",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge ou engager une médiation pour défendre les intérêts du majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de maltraitance institutionnelle ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le procureur ou le juge",
+      "Organiser les soins",
+      "Modifier la mesure"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit alerter les autorités compétentes en cas de maltraitance institutionnelle."
+  },
+  {
+    question: "Que doit faire le MJPM si le majeur protégé est manipulé par un tiers ?",
+    options: [
+      "Respecter la relation",
+      "Ignorer la situation",
+      "Saisir le juge pour protéger le majeur",
+      "Modifier la mesure"
+    ],
+    answer: 2,
+    explanation: "Le MJPM doit saisir le juge si un tiers manipule ou influence le majeur."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de conflit familial complexe ?",
+    options: [
+      "Organiser les soins",
+      "Saisir le juge pour arbitrage et préserver l’intérêt du majeur",
+      "Modifier la mesure",
+      "Ignorer le conflit"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge pour arbitrer un conflit familial qui nuit à la mesure."
+  },
+  {
+    question: "Que doit faire le MJPM en cas de refus de coopération d’un professionnel ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou l’ordre professionnel",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge ou l’ordre concerné pour garantir la coopération."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de précarité extrême ?",
+    options: [
+      "Organiser les soins",
+      "Mobiliser les dispositifs d’urgence et alerter les partenaires",
+      "Modifier la mesure",
+      "Ignorer la situation"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit mobiliser les dispositifs adaptés et alerter les partenaires en cas de précarité extrême."
+  },
+  {
+    question: "Que doit faire le MJPM si le majeur protégé est en errance ?",
+    options: [
+      "Ignorer la situation",
+      "Organiser les soins",
+      "Mobiliser les partenaires pour une prise en charge adaptée",
+      "Modifier la mesure"
+    ],
+    answer: 2,
+    explanation: "Le MJPM doit mobiliser les partenaires pour une prise en charge adaptée."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de dépendance affective ?",
+    options: [
+      "Respecter la relation sans condition",
+      "Ignorer la situation",
+      "Veiller à préserver l’autonomie du majeur et saisir le juge si nécessaire",
+      "Modifier la mesure"
+    ],
+    answer: 2,
+    explanation: "Le MJPM veille à préserver l’autonomie du majeur dans une relation de dépendance affective."
+  },
+  {
+    question: "Que doit faire le MJPM si le majeur protégé est victime d’abus de faiblesse ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le procureur ou le juge",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit saisir les autorités compétentes en cas d’abus de faiblesse."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de conflit entre professionnels ?",
+    options: [
+      "Ignorer le conflit",
+      "Saisir le juge ou organiser une médiation",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le juge ou organiser une médiation pour préserver l’intérêt du majeur."
+  },
+  {
+    question: "Que doit faire le MJPM si le majeur protégé est hospitalisé sans information ?",
+    options: [
+      "Ignorer la situation",
+      "Se rendre sur place et demander des explications",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit se rendre sur place et demander des explications pour assurer le suivi."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de rupture de soins ?",
+    options: [
+      "Ignorer la situation",
+      "Organiser les soins",
+      "Mobiliser les partenaires et saisir le juge si nécessaire",
+      "Modifier la mesure"
+    ],
+    answer: 2,
+    explanation: "Le MJPM doit mobiliser les partenaires et saisir le juge si la rupture de soins met en danger le majeur."
+  },
+  {
+    question: "Que doit faire le MJPM si le majeur protégé est victime de discrimination ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le défenseur des droits ou le juge",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM peut saisir le défenseur des droits ou le juge en cas de discrimination."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de refus d’accès à un droit fondamental ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou engager un recours",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit agir pour garantir l’accès aux droits fondamentaux du majeur."
+  },
+  {
+    question: "Que doit faire le MJPM si le majeur protégé est en danger immédiat ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou le procureur sans délai",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit alerter immédiatement le juge ou le procureur en cas de danger."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de conflit d’intérêt ?",
+    options: [
+      "Ignorer le conflit",
+      "Demander la désignation d’un subrogé ou d’un autre MJPM",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit demander la désignation d’un subrogé ou d’un autre MJPM en cas de conflit d’intérêt."
+  },
+  {
+    question: "Que doit faire le MJPM si le majeur protégé est privé de liberté sans justification ?",
+    options: [
+      "Ignorer la situation",
+      "Saisir le juge ou le procureur",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM doit saisir les autorités compétentes en cas de privation de liberté injustifiée."
+  },
+  {
+    question: "Quel est le rôle du MJPM dans une situation de rupture de lien social ?",
+    options: [
+      "Ignorer la situation",
+      "Favoriser la reconstruction du lien social et mobiliser les partenaires",
+      "Modifier la mesure",
+      "Organiser les soins"
+    ],
+    answer: 1,
+    explanation: "Le MJPM veille à préserver ou reconstruire le lien social du majeur protégé."
+  }
+];
+
